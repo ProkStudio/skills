@@ -1,6 +1,6 @@
 ---
 name: minecraft-architecture
-description: Design and build non-generic Minecraft architecture for Java 1.21+. Use whenever the user wants to build, design, improve or critique anything in Minecraft - house, base, camp, castle, fortress, wall, tower, village, town, city, farm, tech build, shop, bridge, interior or decoration - or asks to make a build prettier, less boxy, more detailed, more varied, or in a named style such as medieval fantasy, Japanese, modern minimal, nordic rustic or steampunk industrial. Covers massing and silhouette, a roof catalogue that replaces the default stair gable, block palettes and texturing, facade depth and detailing, terrain integration, interiors, settlement layout, an anti-sameness variation engine, and fixes for glass panes, iron bars, fences and walls that render as lone disconnected posts. Always asks 2-3 clarifying questions before building.
+description: Design and build non-generic Minecraft architecture for Java 1.21+. Use whenever the user wants to build, design, improve or critique anything in Minecraft - house, base, camp, castle, fortress, wall, tower, village, town, city, farm, tech build, shop, bridge, interior or decoration - or asks to make a build prettier, less boxy, more detailed, more varied, or in a named style such as medieval fantasy, Japanese, modern minimal, nordic rustic, steampunk industrial, gothic, classical, Egyptian, Mesoamerican, dwarven or sci-fi. Covers massing and silhouette, a roof catalogue that replaces the default stair gable, block palettes and texturing, facade depth and detailing, terrain integration, interiors, settlement layout, an anti-sameness variation engine, and fixes for glass panes, iron bars, fences and walls that render as lone disconnected posts. Always asks 2-3 clarifying questions before building.
 version: 1.0.0
 ---
 
@@ -18,9 +18,12 @@ improvising when the task grows past it:
 
 | Companion skill | Takes over when |
 | --- | --- |
+| `../minecraft-block-palettes/SKILL.md` | Material questions: which variants exist, version gates, ready-made palettes, colour and value |
 | `../minecraft-interiors/SKILL.md` | The build needs furnished rooms: room program, ceiling heights, furniture, lighting design |
 | `../minecraft-organic-shapes/SKILL.md` | Anything curved: round towers, domes, arches, vaults, bridges, winding paths, rocks, statues |
 | `../minecraft-settlements/SKILL.md` | More than ~3 buildings on one site: centre, roads, districts, plots, building mix |
+| `../../terraforming/minecraft-terraforming/SKILL.md` | The land itself: mountains, cliffs, valleys, rivers, coasts, biome blending, planting |
+| `../../redstone/minecraft-redstone-for-builders/SKILL.md` | Mechanisms: hidden doors, switched lighting, elevators, gates, portcullises, sorters |
 
 ## Non-negotiables
 
@@ -58,6 +61,8 @@ Swap in these when more relevant:
 - **Must-match** - an existing build, palette or world save to blend with.
 - **Freedom** - "may I change the terrain / add outbuildings?"
 - **Interior** - full interior or shell only?
+- **Version** - only when the palette depends on it (1.20 cherry, 1.21 tuff and copper,
+  1.21.4 pale oak and resin, 1.21.9 shelves and copper chests).
 
 After the answers, restate the brief in 2-3 lines, then design.
 
@@ -82,6 +87,11 @@ placing a single detail block.
 
 Round masses (towers, rotundas, apses) need exact layer tables, not freehand circles - use
 `../minecraft-organic-shapes/references/circles-and-cylinders.md`.
+
+If the build will hide a mechanism (secret door, lift, portcullis), reserve the service void
+now - a 2-3 block cavity under the floor or inside a thick wall. Retrofitting wiring into a
+finished shell is what makes redstone "ruin" builds; see
+`../../redstone/minecraft-redstone-for-builders/SKILL.md`.
 
 ## Step 3 - Structure and openings
 
@@ -113,6 +123,11 @@ Read `references/palette-and-texture.md` and the chosen file in `styles/`. Lock 
 use 2-3 blocks of similar value and different texture, placed in irregular patches of 2-5
 blocks - never a checkerboard, never uniform noise.
 
+For the blocks themselves - which stairs/slabs/walls actually exist, what is gated behind
+which version, and 18 ready-to-use palettes - use
+`../minecraft-block-palettes/SKILL.md`. Never promise a variant without checking
+`../minecraft-block-palettes/references/block-families.md`.
+
 ## Step 6 - Depth and detail
 
 Read `references/facade-depth-and-detail.md`. Depth comes from offsets in and out of the
@@ -130,7 +145,11 @@ For the curved things around the build - paths, terraces, retaining walls, strea
 trees and rocks - use `../minecraft-organic-shapes/references/curves-paths-and-rivers.md` and
 `../minecraft-organic-shapes/references/natural-forms.md`.
 
-## Step 8 - Interior
+When the site itself has to be built or reshaped - a mountain, a cliff, a valley, a coast, a
+river, a biome transition - switch to
+`../../terraforming/minecraft-terraforming/SKILL.md`.
+
+## Step 8 - Interior and mechanisms
 
 For a full interior, switch to `../minecraft-interiors/SKILL.md` (room program, ceiling
 heights, furniture recipes, light levels, interiors by build type). The interiors section of
@@ -140,6 +159,10 @@ furnished ground floor.
 Either way: ceiling structure, floor zoning, a focal point per room, hidden lighting, and
 interior windows that line up with the exterior openings.
 
+For secret doors, switched or automatic lighting, lifts, drawbridges, gates and storage
+systems, hand to `../../redstone/minecraft-redstone-for-builders/SKILL.md` - and keep every
+wire inside the void reserved in Step 2.
+
 ## Step 9 - QA before delivering
 
 Run this checklist and fix what fails:
@@ -147,6 +170,7 @@ Run this checklist and fix what fails:
 - [ ] Top-down outline is not a rectangle; silhouette has 3+ height steps.
 - [ ] Roof is not one continuous stair run; roof plane is broken at least once.
 - [ ] 3+ material tiers; no surface is a single flat material.
+- [ ] Every block named actually exists in that variant and in the user's version.
 - [ ] Wall plane offset in and out at least twice per facade.
 - [ ] Base course present; no floating or half-buried corners; terrain not flattened.
 - [ ] Pane/fence/wall runs connect - full-block jambs, no explicit blockstates, reload
@@ -181,11 +205,15 @@ half-hip", "push the wing 3 blocks east") instead of a generic offer to help.
 | "All my houses look the same" | Same skeleton, different textures | `references/variation-engine.md` - roll footprint, roof, height, motif, not just materials |
 | "Looks flat / like a texture pack demo" | Detail applied on an unbroken plane | Step 6 - offsets, plinth, cornice, recesses first |
 | "Panes and fences are lone posts" | Explicit blockstates, no block update, or non-solid neighbours | `references/block-connection-rules.md` |
+| "That block/stair doesn't exist" | Variant assumed without checking | `../minecraft-block-palettes/references/block-families.md` |
+| "I don't have those blocks" | Version-gated palette | `../minecraft-block-palettes/references/version-gates.md` |
 | "Build floats on a flat square" | Terrain flattened for convenience | Step 7 - stepped foundation, retaining walls, planting |
+| "The landscape around it is boring" | Site never designed | `../../terraforming/minecraft-terraforming/SKILL.md` |
 | "Palette is muddy" | Too many materials, no value contrast | Step 5 - 3 tiers, contrast by value first |
 | "Big build feels small" | Detail motifs not scaled | Step 1 - scale anchors, 2-3 block trim on large masses |
 | "My circle/dome is lumpy" | Freehand curves | `../minecraft-organic-shapes/` layer tables |
 | "Rooms are empty / ceilings feel wrong" | No interior program | `../minecraft-interiors/SKILL.md` |
+| "Redstone wiring ruins the facade" | No service void reserved | `../../redstone/minecraft-redstone-for-builders/SKILL.md` |
 | "My village is a row of houses" | Buildings before plan | `../minecraft-settlements/SKILL.md` |
 
 ## References
@@ -203,10 +231,14 @@ Read on demand, not all at once:
 | `references/build-types.md` | Houses, castles, villages, farms, tech builds, interiors |
 | `references/variation-engine.md` | Anything repeated - villages, districts, multiple requests |
 | `styles/<style>.md` | Style chosen in Step 0 |
+| `../minecraft-block-palettes/SKILL.md` | Block families, version gates, ready palettes, special block behaviour |
 | `../minecraft-interiors/SKILL.md` | Furnishing and lighting the inside |
 | `../minecraft-organic-shapes/SKILL.md` | Circles, domes, arches, bridges, terrain curves, statues |
 | `../minecraft-settlements/SKILL.md` | Several buildings, streets, districts, a whole town |
+| `../../terraforming/minecraft-terraforming/SKILL.md` | Building or reshaping the land around the site |
+| `../../redstone/minecraft-redstone-for-builders/SKILL.md` | Hidden doors, lighting control, lifts, gates, sorters |
 
 Styles available: `medieval-fantasy`, `japanese`, `modern-minimal`, `nordic-rustic`,
-`steampunk-industrial`. If the user asks for a style with no file, build the closest one and
-say which principles you transferred.
+`steampunk-industrial`, `gothic`, `classical-antiquity`, `egyptian`, `mesoamerican`,
+`dwarven-underground`, `sci-fi-futuristic`. If the user asks for a style with no file, build
+the closest one and say which principles you transferred.

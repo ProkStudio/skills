@@ -7,12 +7,12 @@ Things that break builds or promises. Check before proposing.
 | Block | Note |
 | --- | --- |
 | Light block | Invisible light 0-15; the cleanest hidden lighting, but unobtainable in survival |
-| Barrier, structure void, structure block, jigsaw | Creative/command only |
-| Command block, chain/repeating variants | Command only |
-| Budding amethyst | Cannot be obtained even with silk touch |
-| Spawner, end portal frame, bedrock, reinforced deepslate | Not craftable |
-| Petrified oak slab, infested stone variants | Not craftable |
-| Debug stick, jigsaw | Creative only |
+| Barrier, structure void, structure block, jigsaw block | Creative/command only |
+| Command block, chain and repeating variants | Command only |
+| Budding amethyst | Cannot be obtained even with Silk Touch |
+| Monster spawner, end portal frame, bedrock, reinforced deepslate | Not obtainable in survival |
+| Petrified oak slab | Not obtainable in survival |
+| Debug stick | Creative only (item, not a block) |
 
 In a survival answer, replace light blocks with lanterns under slabs, glowstone under carpets,
 sea lanterns behind iron bars, or copper bulbs (1.21+).
@@ -26,27 +26,39 @@ large-scale placement.
 
 ## Piston behaviour (matters for hidden doors)
 
-- **Cannot be pushed:** obsidian, bedrock, barriers, end portal frames, reinforced deepslate,
-  enchanting tables, anvils? (anvils can be pushed), and all **block entities** - chests,
-  trapped chests, barrels, furnaces, hoppers, droppers, dispensers, shulker boxes, beacons,
-  spawners, jukeboxes, lecterns, bells, signs? (signs can be pushed), banners? (can be pushed),
-  brewing stands, campfires, bee nests, decorated pots, copper chests (1.21.9), shelves (1.21.9).
+- **Immovable - the piston will not extend at all:** obsidian, crying obsidian, respawn
+  anchors, bedrock, reinforced deepslate, barriers, light blocks, end portal frames, monster
+  spawners, trial spawners (1.21+), vaults (1.21+), beacons, enchanting tables, ender chests,
+  jukeboxes, lodestones, grindstones, command and structure blocks, creaking hearts (1.21.4+),
+  sculk sensors, calibrated sculk sensors, sculk catalysts and sculk shriekers.
+- **Cannot be pushed because they hold block entities** (Java only - Bedrock does move them):
+  chests, trapped chests, copper chests (1.21.9+), barrels, furnaces, blast furnaces, smokers,
+  hoppers, droppers, dispensers, crafters (1.21+), brewing stands, lecterns, chiseled
+  bookshelves (1.20+), shelves (1.21.9+), conduits, beehives, bee nests and daylight detectors.
   When a design needs a container to move, redesign it.
-- **Break when pushed:** doors? (doors move fine), but glass panes, torches, flowers, redstone
-  components, carpets, buttons and pressure plates pop off when the block they sit on moves.
-- **Sticky blocks:** slime and honey blocks stick to neighbours but **not to each other**. Honey
-  does not slide entities; slime bounces them.
+- **Movable exceptions worth remembering:** anvils and shulker boxes can be pushed, and so can
+  doors, trapdoors, fence gates, glass panes, walls and fences.
+- **Break when pushed** (they drop as items): signs, hanging signs, banners, campfires and soul
+  campfires. So does anything that needs a support block - torches, levers, buttons, pressure
+  plates, rails, carpets, flowers and redstone dust pop off when the block they sit on moves.
+- **Sticky blocks:** slime and honey blocks stick to their neighbours but **not to each other**.
+  Honey does not slide entities standing on it; slime bounces them.
 - Max 12 blocks moved per piston push.
 
 ## Waterlogging and water interaction
 
-- Waterloggable: slabs (bottom half), stairs, fences, walls, trapdoors, glass panes, iron bars,
-  chains, ladders, signs, lanterns? (lanterns cannot be waterlogged), scaffolding, rails? (no).
-  Use waterlogged stairs and walls for fountains and canals so the water surface reads full.
-- Water destroys: torches, campfires (extinguish), farmland (turns to dirt when flooded? no -
-  farmland hydrates), concrete powder (sets), redstone wire (breaks).
-- Ice and packed ice melt near light unless in cold biomes; blue ice does not melt.
-- Sea pickles only light when waterlogged (6/9/12/15 for 1-4).
+- **Waterloggable:** stairs, bottom slabs, fences, walls, iron bars, glass panes, trapdoors,
+  ladders, signs and hanging signs, chests and trapped chests, scaffolding, chains (1.16+),
+  lanterns and soul lanterns (1.16.2+), candles and amethyst clusters (1.17+), rails (1.17+),
+  pointed dripstone, sculk sensors, and campfires (which go out but stay as a block). Use
+  waterlogged stairs and walls in fountains and canals so the surface stays full instead of
+  stepping down.
+- **Water removes:** torches, redstone dust and other blocks that need dry support; it sets
+  concrete powder into concrete and extinguishes fire and unwaterlogged campfires.
+- Farmland is hydrated by water within 4 blocks. It reverts to dirt when mobs trample it or a
+  falling block lands on it, not from being near water.
+- Ice and packed ice melt in light unless they sit in a cold biome; blue ice never melts.
+- Sea pickles only light when waterlogged (6 / 9 / 12 / 15 for 1-4 pickles).
 
 ## Light and spawning
 
@@ -70,12 +82,15 @@ large-scale placement.
 
 ## Blocks with orientation to double-check in commands
 
-- Stairs: `facing`, `half` (top/bottom), `shape` (auto).
+- Stairs: `facing`, `half` (top/bottom), `shape` (computed automatically).
 - Slabs: `type` (top/bottom/double).
-- Logs, pillars, basalt, purpur pillar, bone block, chiseled bookshelf? (no): `axis` x/y/z.
+- Logs, stripped logs, wood, pillar quartz, basalt, purpur pillar, bone block, hay bales,
+  muddy mangrove roots, deepslate (the plain rotatable one): `axis` x/y/z.
+- Chiseled bookshelf (1.20+): `facing` plus one occupancy state per slot - place and fill it by
+  hand rather than by command.
 - Glazed terracotta: `facing` rotates the pattern - the whole point of the block.
 - Trapdoors: `facing`, `half`, `open`.
-- Jigsaw/observers/droppers: `facing` including up/down.
+- Observers, droppers, dispensers, jigsaws: `facing`, including up and down.
 - **Never** write connection states (`north=`, `east=`, `up=`) for fences, walls, panes, bars
   or chains - the game computes them; see
   `../../minecraft-architecture/references/block-connection-rules.md`.
