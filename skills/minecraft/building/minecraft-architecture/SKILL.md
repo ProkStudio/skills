@@ -1,6 +1,6 @@
 ---
 name: minecraft-architecture
-description: Design and build non-generic Minecraft architecture for Java 1.21+. Use whenever the user wants to build, design, improve or critique anything in Minecraft - house, base, camp, castle, fortress, wall, tower, village, town, city, farm, tech build, shop, bridge, interior or decoration - or asks to make a build prettier, less boxy, more detailed, more varied, or in a named style such as medieval fantasy, Japanese, modern minimal, nordic rustic, steampunk industrial, gothic, classical, Egyptian, Mesoamerican, dwarven or sci-fi. Covers massing and silhouette, a roof catalogue that replaces the default stair gable, block palettes and texturing, facade depth and detailing, terrain integration, interiors, settlement layout, an anti-sameness variation engine, and fixes for glass panes, iron bars, fences and walls that render as lone disconnected posts. Always asks 2-3 clarifying questions before building.
+description: Design and build non-generic Minecraft architecture for Java 1.21+ and the 2026 drops. Use whenever the user wants to build, design, improve or critique anything in Minecraft - house, base, camp, castle, fortress, wall, tower, village, town, city, farm, tech build, shop, bridge, interior or decoration - or asks to make a build prettier, less boxy, more detailed, more varied, or in a named style: 19 style guides from medieval fantasy, Japanese and gothic to Mediterranean, Moorish, Chinese imperial, art deco, brutalist, western and elven. Covers massing and silhouette, a roof catalogue that replaces the default stair gable, block palettes and texturing, facade depth and detailing, terrain integration, interiors, settlement layout, an anti-sameness variation engine, and fixes for glass panes, iron bars, fences and walls that render as lone disconnected posts. Always asks 2-3 clarifying questions before building.
 version: 1.0.0
 ---
 
@@ -9,9 +9,11 @@ version: 1.0.0
 Build principles, not blueprints. Decide every design question deliberately from the
 context, then hand the player a plan they can actually place block by block.
 
-**Target:** Java Edition 1.21+ (creative, unlimited blocks). Blocks from 1.20-1.21 such as
-bamboo planks, cherry wood, tuff bricks, chiseled/grate/bulb copper, decorated pots and
-pale oak are fair game; say so when a block is version-gated.
+**Target:** Java Edition 1.21+ including the 2026 drops (creative, unlimited blocks). Blocks
+from 1.20-1.21 such as bamboo planks, cherry wood, tuff bricks, chiseled/grate/bulb copper,
+decorated pots and pale oak are fair game, as are 26.x additions such as sulfur and cinnabar
+masonry (26.2) and wool and concrete stairs and slabs (26.3); say so when a block is
+version-gated.
 
 This skill owns the **single building shell**. Hand over to a companion skill instead of
 improvising when the task grows past it:
@@ -24,6 +26,7 @@ improvising when the task grows past it:
 | `../minecraft-settlements/SKILL.md` | More than ~3 buildings on one site: centre, roads, districts, plots, building mix |
 | `../../terraforming/minecraft-terraforming/SKILL.md` | The land itself: mountains, cliffs, valleys, rivers, coasts, biome blending, planting |
 | `../../redstone/minecraft-redstone-for-builders/SKILL.md` | Mechanisms: hidden doors, switched lighting, elevators, gates, portcullises, sorters |
+| `../../versions/minecraft-version-history/SKILL.md` | The build targets an old version or a version range, or has to be moved between versions or editions |
 
 ## Non-negotiables
 
@@ -62,7 +65,8 @@ Swap in these when more relevant:
 - **Freedom** - "may I change the terrain / add outbuildings?"
 - **Interior** - full interior or shell only?
 - **Version** - only when the palette depends on it (1.20 cherry, 1.21 tuff and copper,
-  1.21.4 pale oak and resin, 1.21.9 shelves and copper chests).
+  1.21.4 pale oak and resin, 1.21.9 shelves and copper chests, 26.2 sulfur and cinnabar,
+  26.3 wool and concrete stairs, poplar and cushions).
 
 After the answers, restate the brief in 2-3 lines, then design.
 
@@ -206,7 +210,8 @@ half-hip", "push the wing 3 blocks east") instead of a generic offer to help.
 | "Looks flat / like a texture pack demo" | Detail applied on an unbroken plane | Step 6 - offsets, plinth, cornice, recesses first |
 | "Panes and fences are lone posts" | Explicit blockstates, no block update, or non-solid neighbours | `references/block-connection-rules.md` |
 | "That block/stair doesn't exist" | Variant assumed without checking | `../minecraft-block-palettes/references/block-families.md` |
-| "I don't have those blocks" | Version-gated palette | `../minecraft-block-palettes/references/version-gates.md` |
+| "I don't have those blocks" | Version-gated palette | `../minecraft-block-palettes/references/version-gates.md`, then `../../versions/minecraft-version-history/references/block-substitutions.md` for the replacement |
+| "I'm on an old version / a server behind the latest" | Design assumes current blocks, height limit or light rules | `../../versions/minecraft-version-history/SKILL.md` |
 | "Build floats on a flat square" | Terrain flattened for convenience | Step 7 - stepped foundation, retaining walls, planting |
 | "The landscape around it is boring" | Site never designed | `../../terraforming/minecraft-terraforming/SKILL.md` |
 | "Palette is muddy" | Too many materials, no value contrast | Step 5 - 3 tiers, contrast by value first |
@@ -237,8 +242,31 @@ Read on demand, not all at once:
 | `../minecraft-settlements/SKILL.md` | Several buildings, streets, districts, a whole town |
 | `../../terraforming/minecraft-terraforming/SKILL.md` | Building or reshaping the land around the site |
 | `../../redstone/minecraft-redstone-for-builders/SKILL.md` | Hidden doors, lighting control, lifts, gates, sorters |
+| `../../versions/minecraft-version-history/SKILL.md` | Old versions, version ranges, substitutions, migrating a build |
 
-Styles available: `medieval-fantasy`, `japanese`, `modern-minimal`, `nordic-rustic`,
-`steampunk-industrial`, `gothic`, `classical-antiquity`, `egyptian`, `mesoamerican`,
-`dwarven-underground`, `sci-fi-futuristic`. If the user asks for a style with no file, build
-the closest one and say which principles you transferred.
+## Styles available
+
+| Style | Read it for |
+| --- | --- |
+| `styles/medieval-fantasy.md` | Timber frame, cobble, exaggerated roofs |
+| `styles/japanese.md` | Timber frame, deep eaves, screens, gardens |
+| `styles/modern-minimal.md` | Flat roofs, glass, concrete, cantilevers |
+| `styles/nordic-rustic.md` | Turf roofs, dark timber, stone bases |
+| `styles/steampunk-industrial.md` | Brick, copper, pipes, machinery |
+| `styles/gothic.md` | Buttresses, pointed arches, verticality |
+| `styles/classical-antiquity.md` | Columns, pediments, podium, symmetry |
+| `styles/egyptian.md` | Battered walls, sandstone mass, hypostyle halls |
+| `styles/mesoamerican.md` | Stepped pyramids, jungle stone, carved bands |
+| `styles/dwarven-underground.md` | Carved halls, massive scale, lava light |
+| `styles/sci-fi-futuristic.md` | Panels, greebles, emissive strips |
+| `styles/cottagecore.md` | Tiny cottage, thatch, gardens, clutter |
+| `styles/mediterranean.md` | Whitewash, terracotta roofs, terraces, slopes |
+| `styles/moorish-islamic.md` | Courtyards, horseshoe arches, tile bands, domes |
+| `styles/chinese-imperial.md` | Podium, bracket clusters, upturned tiled roofs |
+| `styles/art-deco.md` | Setbacks, vertical piers, gold and quartz |
+| `styles/brutalist.md` | Concrete mass, cantilevers, deep reveals |
+| `styles/western-frontier.md` | False fronts, boardwalks, dusty main street |
+| `styles/elven-natural.md` | Slender towers, verdigris roofs, tree integration |
+
+If the user asks for a style with no file, build the closest one and say which principles you
+transferred.

@@ -1,6 +1,8 @@
 # Block families and the variant matrix
 
 Everything here is Java Edition. Version gates are marked; unmarked blocks exist in 1.20+.
+For what changed in each version, see
+`../../../versions/minecraft-version-history/SKILL.md`.
 
 ## Variant matrix - stone families
 
@@ -29,6 +31,8 @@ S = stairs, L = slab, W = wall, C = chiseled/decorative sibling.
 | Bricks | yes | yes | yes | |
 | Mud bricks (1.19) | yes | yes | yes | Packed mud has no variants |
 | Resin bricks (1.21.4) | yes | yes | yes | + chiseled resin bricks |
+| Sulfur bricks (26.2) | yes | yes | yes | Saturated yellow; plain sulfur and sulfur spike are single blocks |
+| Cinnabar (26.2) | yes | yes | yes | Deep red; brick variants |
 | Sandstone | yes | yes | yes | + chiseled (no variants) |
 | Smooth sandstone | yes | yes | no | |
 | Cut sandstone | **no** | yes | no | Slab only |
@@ -45,10 +49,17 @@ S = stairs, L = slab, W = wall, C = chiseled/decorative sibling.
 | Dark prismarine | yes | yes | no | |
 | Cut copper (all oxidation stages) | yes | yes | no | Waxed versions of everything |
 | Calcite / dripstone / amethyst / obsidian | no | no | no | Single blocks |
+| Concrete, 16 colours | **26.3+** | **26.3+** | no | No stairs or slabs at all before 26.3 |
+| Wool, 16 colours | **26.3+** | **26.3+** | no | No stairs or slabs at all before 26.3; carpet is the pre-26.3 thin variant |
 
-**No stairs, slabs or walls at all:** terracotta (plain and all 16 colours), glazed terracotta,
-concrete, concrete powder, wool, all metal blocks (iron, gold, copper block, netherite),
+**No stairs, slabs or walls at all, in any version:** terracotta (plain and all 16 colours),
+glazed terracotta, concrete powder, all metal blocks (iron, gold, block of copper, netherite),
 lapis, bone block, calcite, magma, clay, packed mud, dripstone block, sculk blocks.
+
+**Version-dependent:** concrete and wool gained stairs and slabs in **26.3 "Wilderness
+Bound"** and have none before that. If the target version is 1.21.x or older, a saturated flat
+colour cannot be sloped - use stained terracotta for the mass with quartz, sandstone or
+deepslate stairs in the nearest value, or accept a blocky profile.
 
 ## Wood families
 
@@ -68,6 +79,7 @@ fence gate, door, trapdoor, button, pressure plate, sign, hanging sign (1.20+), 
 | Mangrove | deep red-brown | 1.19+ |
 | Cherry | pale pink, purple log | 1.20+ |
 | Pale oak | pale grey-cream | 1.21.4+ |
+| Poplar | pale warm, three leaf colours | 26.3+ |
 | Crimson (stem/hyphae) | maroon | nether |
 | Warped (stem/hyphae) | teal | nether |
 
@@ -105,15 +117,17 @@ bamboo raft.
   clump.
 - 1.21.5+: leaf litter, wildflowers, bush, firefly bush, short dry grass, tall dry grass,
   cactus flower.
-- Leaves: all wood families + azalea leaves, flowering azalea leaves, pale oak leaves (1.21.4).
-  Player-placed leaves do not decay.
+- 26.1+: golden dandelion. 26.3+: red shrub, shelf mushroom.
+- Leaves: all wood families + azalea leaves, flowering azalea leaves, pale oak leaves (1.21.4),
+  poplar leaves in three colours (26.3). Player-placed leaves do not decay.
 
 ## Functional blocks used as decoration
 
-Barrels, chests (+ copper chest 1.21.9), shelves (1.21.9), lecterns, chiseled bookshelves
-(1.20+), bookshelves, cartography/fletching/smithing tables, looms, composters, cauldrons,
-bells, grindstones, stonecutters, blast furnaces, smokers, anvils, decorated pots (1.20+),
-brewing stands, flower pots, item frames, armor stands, mannequins (1.21.9), hoppers, scaffolding,
+Barrels, chests (+ copper chest 1.21.9), shelves (1.21.9, + poplar shelf 26.3), lecterns,
+chiseled bookshelves (1.20+), bookshelves, cartography/fletching/smithing tables, looms,
+composters, cauldrons, bells, grindstones, stonecutters, blast furnaces, smokers, anvils,
+decorated pots (1.20+), brewing stands, flower pots, item frames, armor stands, mannequins
+(1.21.9), cushions (26.3, an entity - sittable), straw beds (26.3), hoppers, scaffolding,
 lightning rods, target blocks, honey/slime blocks, bee nests, beehives, sculk family.
 
 ## Naming discipline
