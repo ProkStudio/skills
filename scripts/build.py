@@ -7,7 +7,11 @@ DST = r"D:\skills"
 
 IGNORE = shutil.ignore_patterns(".git", "node_modules", "__pycache__", "*.pyc")
 SKIP_WALK = set([".git", "node_modules", ".claude", ".codex", ".gemini", ".hermes",
-                 ".vibe", ".claude-plugin", ".codex-plugin", ".github", "__pycache__"])
+                 ".vibe", ".claude-plugin", ".codex-plugin", ".factory", ".github",
+                 "__pycache__"])
+# For repos that keep their skills inside .claude/skills
+SKIP_MIN = set([".git", "node_modules", "__pycache__", ".github", "plugins",
+                ".claude-plugin", ".codex-plugin", ".factory"])
 
 CATS = {
  "video": ["remotion-best-practices","remotion-captions","remotion-create","remotion-docs",
@@ -16,6 +20,16 @@ CATS = {
    "video-downloader","demo-video","slack-gif-creator"],
  "media-design": ["image-enhancer","imagen","elevenlabs","google-tts","algorithmic-art",
    "canvas-design","theme-factory","brand-guidelines","design-system"],
+ "design": ["animejs","gsap-scrolltrigger","lottie-animations","motion-framer",
+   "react-spring-physics","scroll-reveal-libraries","locomotive-scroll","barba-js",
+   "rive-interactive","animated-component-libraries","modern-web-design","pixijs-2d",
+   "ui-design-system","ux-researcher-designer","experiment-designer","site-architecture"],
+ "modeling": ["blender","openscad","cad-3d-printable","threejs-webgl","babylonjs-engine",
+   "playcanvas-engine","aframe-webxr","react-three-fiber","web3d-integration-patterns",
+   "lightweight-3d-effects","blender-web-pipeline","substance-3d-texturing",
+   "spline-interactive"],
+ "architecture": ["senior-architect","enterprise-architecture","adr-scribe","c4designer",
+   "architecture-diagram-c4"],
  "web": ["frontend-design","web-artifacts-builder","webapp-testing","artifacts-builder",
    "full-page-screenshot","browser-automation","universal-scraping-architect","a11y-audit"],
  "docs": ["docx","pdf","pptx","xlsx","doc-coauthoring","internal-comms","md-document",
@@ -41,7 +55,6 @@ CATS = {
    "statistical-analyst","data-quality-auditor","rag-architect","llm-cost-optimizer"],
  "testing": ["skill-tester","ship-gate"],
  "collaboration": ["handoff","human-gate"],
- "architecture": ["senior-architect"],
  "research": ["deep-research","deepread","dossier","litreview","notebooklm","autoresearch-agent"],
  "meta": ["skill-creator","mcp-builder","mcp-server-builder","claude-api","academy-guide",
    "write-a-skill","skill-doctor","book-to-skill","agent-designer","agent-workflow-designer",
@@ -58,6 +71,9 @@ NAME2CAT = {}
 for c, ns in CATS.items():
     for n in ns:
         NAME2CAT[n] = c
+
+PREFIX_CATS = [("blender-", "modeling"), ("sverchok-", "modeling"),
+               ("bonsai-", "bim-aec"), ("ifcos-", "bim-aec"), ("aec-", "bim-aec")]
 
 ALI = ["agent-harness","agent-memory","board","eval","autoresearch-agent","book-to-skill",
  "chaos-engineering","claude-coach","code-tour","data-quality-auditor","demo-video",
@@ -88,6 +104,10 @@ ALI = ["agent-harness","agent-memory","board","eval","autoresearch-agent","book-
 COMPOSIO = ["video-downloader","image-enhancer","file-organizer","changelog-generator",
  "meeting-insights-analyzer","content-research-writer","artifacts-builder"]
 
+UXUI = ["a11y-audit","apply-aesthetic","brandkit","design-code","design-component",
+ "design-qa","design-review","design-tokens","figma-integration","image-to-code",
+ "migrate-design-system","prototype","redesign","token-build","ux-writing"]
+
 REPOS = [
  {"dir":"remotion-skills","url":"https://github.com/remotion-dev/skills",
   "license":"See source repo (remotion-dev/skills)","cat":"video","allow":"*","roots":["skills"]},
@@ -105,9 +125,46 @@ REPOS = [
  {"dir":"alirezarezvani-skills","url":"https://github.com/alirezarezvani/claude-skills",
   "license":"MIT","cat":"engineering","allow":ALI,
   "roots":["engineering","engineering-team","productivity","research","markdown-html"]},
+ {"dir":"alirezarezvani-skills","url":"https://github.com/alirezarezvani/claude-skills",
+  "license":"MIT","cat":"design",
+  "allow":["ui-design-system","ux-researcher-designer","experiment-designer","site-architecture"],
+  "roots":["product-team","marketing-skill"]},
+ {"dir":"uxui-kit","url":"https://github.com/plugin87/ux-ui-agent-skills",
+  "license":"MIT per upstream README (no LICENSE file in repo)","cat":"design",
+  "allow":UXUI,"roots":[".claude"],"skip":SKIP_MIN},
+ {"dir":"uxuiprinciples","url":"https://github.com/uxuiprinciples/agent-skills",
+  "license":"Upstream README: free to use and distribute","cat":"design",
+  "allow":"*","roots":None},
+ {"dir":"design-3d-web","url":"https://github.com/freshtechbro/claudedesignskills",
+  "license":"See licenses/design-3d-web-LICENSE","cat":"design","allow":"*",
+  "roots":[".claude"],"skip":SKIP_MIN},
+ {"dir":"sethdford-skills","url":"https://github.com/sethdford/claude-skills",
+  "license":"See licenses/sethdford-skills-LICENSE","cat":"engineering","allow":"*",
+  "roots":["architect","designer"],
+  "root_cat":{"architect":"architecture","designer":"design"}},
+ {"dir":"blender-skill","url":"https://github.com/MartinRapcan/blender-claude-skill",
+  "license":"See licenses/blender-skill-LICENSE","cat":"modeling","allow":"*","roots":None},
+ {"dir":"openscad-skill","url":"https://github.com/andreahaku/openscad_claude_skill",
+  "license":"No LICENSE file in upstream repo","cat":"modeling","allow":"*",
+  "roots":None,"force_name":"openscad"},
+ {"dir":"claudecad","url":"https://github.com/rohittp0/ClaudeCAD",
+  "license":"MIT per upstream README (no LICENSE file in repo)","cat":"modeling",
+  "allow":"*","roots":["skills"],"rename":{"printable":"cad-3d-printable"}},
+ {"dir":"openaec-bim",
+  "url":"https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+  "license":"See licenses/openaec-bim-LICENSE","cat":"bim-aec","allow":"*","roots":["skills"]},
+ {"dir":"enterprise-architecture","url":"https://github.com/gauravs19/enterprise-architecture-skill",
+  "license":"See licenses/enterprise-architecture-LICENSE","cat":"architecture",
+  "allow":"*","roots":None,"force_name":"enterprise-architecture"},
+ {"dir":"c4-skills","url":"https://github.com/muthub-ai/c4-skills",
+  "license":"See licenses/c4-skills-LICENSE","cat":"architecture","allow":"*","roots":None},
+ {"dir":"arch-diagram","url":"https://github.com/robertanton81/architecture-diagram-skill",
+  "license":"No LICENSE file in upstream repo","cat":"architecture","allow":"*",
+  "roots":None,"rename":{"skill":"architecture-diagram-c4"}},
 ]
 
-SKIP_NAMES = set(["template","template-skill","sample-skill","spec"])
+SKIP_NAMES = set(["template","template-skill","sample-skill","spec","governance",
+                  "performance","skills"])
 
 
 def read_front(path):
@@ -148,7 +205,8 @@ skills_root = os.path.join(DST, "skills")
 if os.path.isdir(skills_root):
     shutil.rmtree(skills_root)
 os.makedirs(skills_root)
-os.makedirs(os.path.join(DST, "licenses"), exist_ok=True)
+lic_dir = os.path.join(DST, "licenses")
+os.makedirs(lic_dir, exist_ok=True)
 
 taken = {}
 records = []
@@ -160,8 +218,10 @@ for repo in REPOS:
     if not os.path.isdir(root):
         issues.append("missing repo: " + repo["dir"])
         continue
+    skip = repo.get("skip", SKIP_WALK)
+    rename = repo.get("rename", {})
     for dirpath, dirnames, filenames in os.walk(root):
-        dirnames[:] = [d for d in dirnames if d not in SKIP_WALK]
+        dirnames[:] = [d for d in dirnames if d not in skip]
         if "SKILL.md" not in filenames:
             continue
         rel = os.path.relpath(dirpath, root)
@@ -169,8 +229,12 @@ for repo in REPOS:
         if repo["roots"] and (not parts or parts[0] not in repo["roots"]):
             continue
         fname, fdesc = read_front(os.path.join(dirpath, "SKILL.md"))
-        name = parts[-1] if parts else (fname or repo["dir"])
+        if parts:
+            name = parts[-1]
+        else:
+            name = repo.get("force_name") or fname or repo["dir"]
         name = re.sub(r"[^a-z0-9-]", "-", name.lower()).strip("-")
+        name = rename.get(name, name)
         if not name or name in SKIP_NAMES:
             continue
         if repo["allow"] != "*" and name not in repo["allow"]:
@@ -180,7 +244,15 @@ for repo in REPOS:
             dirnames[:] = []
             continue
         cat = NAME2CAT.get(name)
-        if not cat and repo["dir"] == "superpowers-skills" and len(parts) > 1 and parts[-2] != "skills":
+        if not cat and repo.get("root_cat") and parts:
+            cat = repo["root_cat"].get(parts[0])
+        if not cat:
+            for pref, pcat in PREFIX_CATS:
+                if name.startswith(pref):
+                    cat = pcat
+                    break
+        if not cat and repo["dir"] == "superpowers-skills" and len(parts) > 1 \
+                and parts[-2] != "skills":
             cat = parts[-2]
         if not cat:
             cat = repo["cat"]
@@ -199,7 +271,7 @@ for repo in REPOS:
     for lic in ("LICENSE", "LICENSE.md", "LICENSE.txt", "THIRD_PARTY_NOTICES.md"):
         p = os.path.join(root, lic)
         if os.path.isfile(p):
-            shutil.copyfile(p, os.path.join(DST, "licenses", repo["dir"] + "-" + lic))
+            shutil.copyfile(p, os.path.join(lic_dir, repo["dir"] + "-" + lic))
 
 records.sort(key=lambda r: (r["category"], r["name"]))
 cats = {}
@@ -224,7 +296,11 @@ io.open(os.path.join(DST, "catalog.json"), "w", encoding="utf-8").write(
 
 CAT_TITLE = {
  "video": "Video generation & rendering",
- "media-design": "Images, audio & design",
+ "media-design": "Images, audio & generative art",
+ "design": "Design: UX/UI, design systems & motion",
+ "modeling": "3D modeling, CAD & 3D web",
+ "bim-aec": "BIM & AEC: IFC, Bonsai, Sverchok",
+ "architecture": "Software & enterprise architecture",
  "web": "Web, frontend & browser automation",
  "docs": "Documents & publishing",
  "engineering": "Software engineering",
@@ -235,7 +311,6 @@ CAT_TITLE = {
  "testing": "Testing",
  "collaboration": "Collaboration & workflow",
  "problem-solving": "Problem solving",
- "architecture": "Architecture",
  "research": "Research",
  "meta": "Agents, MCP & skill authoring",
  "integrations": "App integrations",
@@ -245,8 +320,8 @@ CAT_TITLE = {
 rd = []
 rd.append("# skills\n")
 rd.append("A curated, vendored collection of **" + str(len(records)) +
-          "** agent skills (`SKILL.md` format), covering everything from coding "
-          "to video generation.\n")
+          "** agent skills (`SKILL.md` format), covering coding, DevOps, data, "
+          "design, 3D modeling, architecture, documents and video generation.\n")
 rd.append("Every skill is copied verbatim from its upstream repository. "
           "Sources and licenses: see [ATTRIBUTION.md](ATTRIBUTION.md) and [licenses/](licenses).\n")
 rd.append("## Install\n")
@@ -282,17 +357,25 @@ at.append("# Attribution\n\nThis repository redistributes skills authored by oth
           "projects. All credit goes to the upstream authors; license terms of each "
           "source apply to the copied files. License texts collected from the sources "
           "are in [licenses/](licenses).\n\n")
+seen_repos = []
 for repo in REPOS:
+    if repo["dir"] in seen_repos:
+        continue
+    seen_repos.append(repo["dir"])
     names = by_repo.get(repo["dir"], [])
     if not names:
         continue
     at.append("## " + repo["dir"] + "\n\n- Upstream: " + repo["url"] +
               "\n- License: " + repo["license"] + "\n- Skills included (" +
               str(len(names)) + "): " + ", ".join(sorted(names)) + "\n\n")
-at.append("## Not redistributed\n\n- `ComposioHQ/awesome-claude-skills` also ships 800+ "
-          "auto-generated per-app integration skills under `composio-skills/`; install "
-          "them from upstream if needed.\n- `VoltAgent/awesome-agent-skills` is a link "
-          "list, not a skill collection.\n")
+at.append("## Not redistributed\n\n"
+          "- `openai/skills` (https://github.com/openai/skills): no LICENSE file in the "
+          "upstream repo, so its Figma/Codex skills are not vendored here. Install them "
+          "from upstream if you need them.\n"
+          "- `ComposioHQ/awesome-claude-skills` also ships 800+ auto-generated per-app "
+          "integration skills under `composio-skills/`; install them from upstream if "
+          "needed.\n"
+          "- `VoltAgent/awesome-agent-skills` is a link list, not a skill collection.\n")
 io.open(os.path.join(DST, "ATTRIBUTION.md"), "w", encoding="utf-8").write("".join(at))
 
 io.open(os.path.join(DST, ".gitignore"), "w", encoding="utf-8").write(

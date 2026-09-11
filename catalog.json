@@ -1,6 +1,496 @@
 {
- "total": 203,
+ "total": 453,
  "skills": [
+  {
+   "name": "adr-scribe",
+   "category": "architecture",
+   "description": "Interactively draft, retro-document, and review Architecture Decision Records (ADRs). The skill detects the usage mode (interview for a new decision, retro-documenting from a PR or code, or reviewing an existing ADR) and enforces the use of the Michael Nygard MADR template. Output format is Markdown. Destination is negotiated (default local filesystem in docs/adr/).",
+   "source_repo": "c4-skills",
+   "source_url": "https://github.com/muthub-ai/c4-skills",
+   "license": "See licenses/c4-skills-LICENSE",
+   "source_path": "adr-scribe",
+   "path": "skills/architecture/adr-scribe"
+  },
+  {
+   "name": "api-gateway-design",
+   "category": "architecture",
+   "description": "Design API gateways that route, authenticate, rate-limit, and aggregate backend services. Use when building client-facing APIs or managing service boundaries.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/api-gateway-design",
+   "path": "skills/architecture/api-gateway-design"
+  },
+  {
+   "name": "architecture-anti-patterns",
+   "category": "architecture",
+   "description": "Identify and avoid common architectural mistakes. Recognize patterns of failure. Use when reviewing designs or learning from mistakes.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architect-toolkit/skills/architecture-anti-patterns",
+   "path": "skills/architecture/architecture-anti-patterns"
+  },
+  {
+   "name": "architecture-brief",
+   "category": "architecture",
+   "description": "Write concise executive summaries of architecture. Communicate decisions and tradeoffs to non-technical stakeholders. Use when presenting to leadership or documenting decisions.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/communication/skills/architecture-brief",
+   "path": "skills/architecture/architecture-brief"
+  },
+  {
+   "name": "architecture-decision-record",
+   "category": "architecture",
+   "description": "Document architectural decisions using ADR format. Use when making significant architectural choices that affect future development.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/decision-making/skills/architecture-decision-record",
+   "path": "skills/architecture/architecture-decision-record"
+  },
+  {
+   "name": "architecture-diagram-c4",
+   "category": "architecture",
+   "description": ">- Creates C4 architecture diagrams by analyzing a codebase. Two output modes: IcePanel (push diagrams to the IcePanel app) and Mermaid (generate Mermaid diagram code). Supports full system diagrams, monorepo subdirectory scoping, and topic-focused diagrams for specific business processes (e.g. payment flow, user login, order processing). Use when the user wants to: create architecture diagrams, visualize a codebase, generate C4 diagrams, create flow diagrams, or diagram a specific business process.",
+   "source_repo": "arch-diagram",
+   "source_url": "https://github.com/robertanton81/architecture-diagram-skill",
+   "license": "No LICENSE file in upstream repo",
+   "source_path": "skill",
+   "path": "skills/architecture/architecture-diagram-c4"
+  },
+  {
+   "name": "architecture-kata",
+   "category": "architecture",
+   "description": "Practice architectural design with structured problems. Time-limited design challenges. Use for skill development, interviews, team exercises.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architect-toolkit/skills/architecture-kata",
+   "path": "skills/architecture/architecture-kata"
+  },
+  {
+   "name": "architecture-patterns-catalog",
+   "category": "architecture",
+   "description": "Reference catalog of proven architecture patterns. Know when to apply each pattern, tradeoffs, and examples. Use as reference when designing systems.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architect-toolkit/skills/architecture-patterns-catalog",
+   "path": "skills/architecture/architecture-patterns-catalog"
+  },
+  {
+   "name": "architecture-principles",
+   "category": "architecture",
+   "description": "Define foundational architecture principles and decision-making rules. Communicate guidelines across organization. Use when establishing architectural standards or updating strategy.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architecture-governance/skills/architecture-principles",
+   "path": "skills/architecture/architecture-principles"
+  },
+  {
+   "name": "architecture-review-checklist",
+   "category": "architecture",
+   "description": "Standardized architecture review process with consistent criteria. Evaluate systems against principles, quality attributes, and operational readiness. Use when conducting architecture reviews.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architecture-governance/skills/architecture-review-checklist",
+   "path": "skills/architecture/architecture-review-checklist"
+  },
+  {
+   "name": "architecture-review-facilitation",
+   "category": "architecture",
+   "description": "Lead effective architecture reviews. Manage discussions, surface disagreements, build consensus, document decisions. Use when conducting reviews or running architecture forums.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architect-toolkit/skills/architecture-review-facilitation",
+   "path": "skills/architecture/architecture-review-facilitation"
+  },
+  {
+   "name": "architecture-roadmap",
+   "category": "architecture",
+   "description": "Create multi-quarter architecture vision and roadmap. Prioritize initiatives, estimate effort, communicate strategy. Use when planning architecture evolution or communicating long-term vision.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/communication/skills/architecture-roadmap",
+   "path": "skills/architecture/architecture-roadmap"
+  },
+  {
+   "name": "build-vs-buy",
+   "category": "architecture",
+   "description": "Systematically evaluate whether to build a solution or buy/use existing product. Use when evaluating tooling, services, or frameworks.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/decision-making/skills/build-vs-buy",
+   "path": "skills/architecture/build-vs-buy"
+  },
+  {
+   "name": "c4-model-diagram",
+   "category": "architecture",
+   "description": "Create C4 context, container, component, and code diagrams. Visualize architecture at different abstraction levels. Use when communicating system structure to diverse audiences.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/communication/skills/c4-model-diagram",
+   "path": "skills/architecture/c4-model-diagram"
+  },
+  {
+   "name": "c4designer",
+   "category": "architecture",
+   "description": "Interactively co-build a software architecture using Simon Brown's C4 model (Context, Container, Component, Code). The skill detects the usage mode (greenfield design, retro-documenting from code or prose, review/explanation, update), runs a structured framing dialogue, proposes incremental drafts, and iterates until explicit user validation. Output format is negotiated (default Mermaid C4 + Markdown; alternatives Structurizr DSL, PlantUML, images). Destination is negotiated too: local filesystem by default, or connected MCP (Notion, Google Drive, Linear documents…). Use this skill whenever the user asks for a C4 diagram, modèle C4, architecture diagram, container diagram, system context, diagramme d'architecture, wants to brainstorm/design a system architecture, shares code or prose wanting it documented, or wants to review/update an existing C4. Trigger proactively whenever an architecture overview or system documentation would clearly help — even without an explicit \"C4\" mention.",
+   "source_repo": "c4-skills",
+   "source_url": "https://github.com/muthub-ai/c4-skills",
+   "license": "See licenses/c4-skills-LICENSE",
+   "source_path": "c4designer",
+   "path": "skills/architecture/c4designer"
+  },
+  {
+   "name": "caching-strategy",
+   "category": "architecture",
+   "description": "Design multi-layer caching strategies (client, edge, service, database) for performance. Use when optimizing latency or reducing database load.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/caching-strategy",
+   "path": "skills/architecture/caching-strategy"
+  },
+  {
+   "name": "capacity-planning",
+   "category": "architecture",
+   "description": "Forecast infrastructure resource needs (compute, storage, network). Model growth scenarios and utilization targets. Use when planning infrastructure investments or optimizing costs.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/infrastructure-design/skills/capacity-planning",
+   "path": "skills/architecture/capacity-planning"
+  },
+  {
+   "name": "change-impact-analysis",
+   "category": "architecture",
+   "description": "Predict impacts of architectural changes on dependent systems. Trace dependencies, assess risk, plan rollout. Use when making major changes or analyzing blast radius.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architecture-governance/skills/change-impact-analysis",
+   "path": "skills/architecture/change-impact-analysis"
+  },
+  {
+   "name": "cloud-architecture",
+   "category": "architecture",
+   "description": "Design cloud infrastructure for AWS, GCP, or Azure. Plan compute, storage, networking, and compliance. Use when architecting cloud systems or migrating to cloud.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/infrastructure-design/skills/cloud-architecture",
+   "path": "skills/architecture/cloud-architecture"
+  },
+  {
+   "name": "compliance-framework",
+   "category": "architecture",
+   "description": "Implement compliance requirements (SOC2, GDPR, HIPAA). Design architecture for regulations. Map technical controls to compliance requirements. Use when building regulated systems.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architecture-governance/skills/compliance-framework",
+   "path": "skills/architecture/compliance-framework"
+  },
+  {
+   "name": "container-orchestration",
+   "category": "architecture",
+   "description": "Design Kubernetes clusters for scaling, service discovery, storage, and networking. Plan upgrades and multi-cluster strategies. Use when architecting container infrastructure.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/infrastructure-design/skills/container-orchestration",
+   "path": "skills/architecture/container-orchestration"
+  },
+  {
+   "name": "context-diagram",
+   "category": "architecture",
+   "description": "Design high-level system boundary diagrams. Show external systems, users, data flows. Use when onboarding teams or clarifying system scope.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/communication/skills/context-diagram",
+   "path": "skills/architecture/context-diagram"
+  },
+  {
+   "name": "cost-optimization",
+   "category": "architecture",
+   "description": "Optimize infrastructure and operational costs without sacrificing performance or reliability. Use when managing cloud budgets or improving unit economics.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/quality-attributes/skills/cost-optimization",
+   "path": "skills/architecture/cost-optimization"
+  },
+  {
+   "name": "cqrs-design",
+   "category": "architecture",
+   "description": "Separate command (write) and query (read) models for complex domains. Use when read/write patterns diverge significantly or when audit/consistency requirements demand immutability.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/cqrs-design",
+   "path": "skills/architecture/cqrs-design"
+  },
+  {
+   "name": "data-flow-diagram",
+   "category": "architecture",
+   "description": "Design data movement and transformation pipelines. Show how data flows between systems, transforms, and where it's stored. Use when architecting data integrations or ETL processes.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/data-architecture/skills/data-flow-diagram",
+   "path": "skills/architecture/data-flow-diagram"
+  },
+  {
+   "name": "data-governance",
+   "category": "architecture",
+   "description": "Establish data ownership, quality standards, compliance policies, and metadata management. Build organizational data practices. Use when defining data strategy or improving data quality and compliance.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/data-architecture/skills/data-governance",
+   "path": "skills/architecture/data-governance"
+  },
+  {
+   "name": "data-model-design",
+   "category": "architecture",
+   "description": "Design data models for business domains using entity-relationship or domain-driven design. Use when modeling new domains or refactoring data structures.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/data-architecture/skills/data-model-design",
+   "path": "skills/architecture/data-model-design"
+  },
+  {
+   "name": "data-partitioning",
+   "category": "architecture",
+   "description": "Design partitioning and sharding strategies for data at scale. Use when single database hits throughput or storage limits.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/data-partitioning",
+   "path": "skills/architecture/data-partitioning"
+  },
+  {
+   "name": "data-pipeline-design",
+   "category": "architecture",
+   "description": "Design batch and streaming data pipelines. Plan ingestion, transformation, quality checks, and failure recovery. Use when building ETL/ELT systems or data infrastructure.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/data-architecture/skills/data-pipeline-design",
+   "path": "skills/architecture/data-pipeline-design"
+  },
+  {
+   "name": "dependency-governance",
+   "category": "architecture",
+   "description": "Manage and optimize system dependencies (libraries, services, data). Reduce coupling, track vulnerabilities, plan deprecation. Use when managing dependency sprawl or improving system modularity.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architecture-governance/skills/dependency-governance",
+   "path": "skills/architecture/dependency-governance"
+  },
+  {
+   "name": "deployment-topology",
+   "category": "architecture",
+   "description": "Plan container orchestration, load balancing, high availability, and scaling. Design deployment topologies for production systems. Use when architecting deployment infrastructure or modernizing deployment practices.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/infrastructure-design/skills/deployment-topology",
+   "path": "skills/architecture/deployment-topology"
+  },
+  {
+   "name": "disaster-recovery-plan",
+   "category": "architecture",
+   "description": "Define recovery objectives (RTO/RPO), backup strategies, failover procedures, and testing protocols. Use when planning disaster recovery or establishing continuity practices.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/infrastructure-design/skills/disaster-recovery-plan",
+   "path": "skills/architecture/disaster-recovery-plan"
+  },
+  {
+   "name": "domain-driven-design",
+   "category": "architecture",
+   "description": "Apply DDD principles to model business domains, design aggregates, and establish clear language across teams. Use when modeling complex business logic or integrating domain experts.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/domain-driven-design",
+   "path": "skills/architecture/domain-driven-design"
+  },
+  {
+   "name": "enterprise-architecture",
+   "category": "architecture",
+   "description": ">- Unified enterprise & software architecture skill grounded in four open-source standards — C4 + Structurizr DSL, ArchiMate 3.x, TOGAF ADM, and arc42 + ADRs (MADR). Use it whenever the user wants to: produce architecture diagrams as code (C4 context/container/component, Structurizr, PlantUML, Mermaid); write architecture docs or decision records (arc42, ADRs/MADRs, design docs); review or assess a design against quality attributes and EA principles; or model an enterprise (capabilities → applications → technology, app landscapes, portfolio rationalization). Trigger it even when no framework is named — e.g. \"draw the architecture of this service\", \"give me a container diagram\", \"write an ADR for choosing Kafka\", \"is this design sound?\", \"map our capabilities to apps\", \"document my architecture in arc42\", \"create an HLD or LLD\", \"assess this design against ISO 25010 / quality attributes\", \"produce a solution design\". Do NOT trigger it for writing application code or REST endpoints, IaC / cloud deployment (Terraform, Kubernetes), database or ER schema design, code-level UML or sequence diagrams, reviewing a pull request, or API reference docs.",
+   "source_repo": "enterprise-architecture",
+   "source_url": "https://github.com/gauravs19/enterprise-architecture-skill",
+   "license": "See licenses/enterprise-architecture-LICENSE",
+   "source_path": ".",
+   "path": "skills/architecture/enterprise-architecture"
+  },
+  {
+   "name": "event-driven-architecture",
+   "category": "architecture",
+   "description": "Design systems that communicate through events instead of direct service calls. Use when building loosely-coupled, scalable, and resilient architectures.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/event-driven-architecture",
+   "path": "skills/architecture/event-driven-architecture"
+  },
+  {
+   "name": "event-sourcing",
+   "category": "architecture",
+   "description": "Store state as immutable event log instead of current values. Build auditable, event-driven systems with full history. Use when auditability, temporal queries, or event-driven processing matters.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/data-architecture/skills/event-sourcing",
+   "path": "skills/architecture/event-sourcing"
+  },
+  {
+   "name": "fitness-function-design",
+   "category": "architecture",
+   "description": "Design metrics that measure architecture health (coupling, modularity, scalability). Automate fitness function checks in CI/CD. Use when establishing quality gates or measuring architectural degradation.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architecture-governance/skills/fitness-function-design",
+   "path": "skills/architecture/fitness-function-design"
+  },
+  {
+   "name": "infrastructure-as-code-patterns",
+   "category": "architecture",
+   "description": "Codify infrastructure with Terraform, CloudFormation, or Pulumi. Design IaC architecture, versioning, testing, and drift detection. Use when automating infrastructure or establishing IaC practices.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/infrastructure-design/skills/infrastructure-as-code-patterns",
+   "path": "skills/architecture/infrastructure-as-code-patterns"
+  },
+  {
+   "name": "integration-patterns",
+   "category": "architecture",
+   "description": "Integrate data across systems using ETL, CDC, event streaming, and API patterns. Design robust, maintainable data integrations. Use when connecting disparate data sources or microservices.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/data-architecture/skills/integration-patterns",
+   "path": "skills/architecture/integration-patterns"
+  },
+  {
+   "name": "interview-prep",
+   "category": "architecture",
+   "description": "Prepare for architecture interview questions and scenarios. Practice system design, tradeoff discussions, communication. Use for career development and interview readiness.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architect-toolkit/skills/interview-prep",
+   "path": "skills/architecture/interview-prep"
+  },
+  {
+   "name": "legacy-modernization",
+   "category": "architecture",
+   "description": "Modernize legacy systems without rewriting from scratch. Use strangler fig, facade, and strategic refactoring.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/decision-making/skills/legacy-modernization",
+   "path": "skills/architecture/legacy-modernization"
+  },
+  {
+   "name": "maintainability-assessment",
+   "category": "architecture",
+   "description": "Assess and design for maintainability. Evaluate code complexity, coupling, and testability. Use when evaluating codebase health or designing for long-term evolution.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/quality-attributes/skills/maintainability-assessment",
+   "path": "skills/architecture/maintainability-assessment"
+  },
+  {
+   "name": "microservices-patterns",
+   "category": "architecture",
+   "description": "Apply proven microservices patterns including saga, circuit breaker, bulkhead, and eventual consistency. Use when designing service-to-service communication and handling distributed failures.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/microservices-patterns",
+   "path": "skills/architecture/microservices-patterns"
+  },
+  {
+   "name": "migration-strategy",
+   "category": "architecture",
+   "description": "Plan large-scale migrations from old systems to new architectures. Use when modernizing legacy systems or upgrading infrastructure.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/decision-making/skills/migration-strategy",
+   "path": "skills/architecture/migration-strategy"
+  },
+  {
+   "name": "monolith-assessment",
+   "category": "architecture",
+   "description": "Evaluate whether to keep, refactor, or break apart a monolithic system. Use when facing scaling or team velocity challenges with monoliths.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/monolith-assessment",
+   "path": "skills/architecture/monolith-assessment"
+  },
+  {
+   "name": "multi-region-design",
+   "category": "architecture",
+   "description": "Distribute globally across multiple regions for low latency, compliance, and resilience. Plan data replication, failover, and latency optimization. Use when designing global systems.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/infrastructure-design/skills/multi-region-design",
+   "path": "skills/architecture/multi-region-design"
+  },
+  {
+   "name": "network-topology",
+   "category": "architecture",
+   "description": "Design VPCs, subnets, security groups, load balancing, and DNS architecture. Plan for segmentation, DDoS protection, and failover. Use when architecting network infrastructure.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/infrastructure-design/skills/network-topology",
+   "path": "skills/architecture/network-topology"
+  },
+  {
+   "name": "observability-design",
+   "category": "architecture",
+   "description": "Design observability (metrics, logs, traces) for understanding system behavior in production. Use when debugging distributed systems or building monitoring.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/quality-attributes/skills/observability-design",
+   "path": "skills/architecture/observability-design"
+  },
+  {
+   "name": "performance-modeling",
+   "category": "architecture",
+   "description": "Model system performance, predict latency under load, identify bottlenecks. Use when optimizing performance or capacity planning.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/quality-attributes/skills/performance-modeling",
+   "path": "skills/architecture/performance-modeling"
+  },
   {
    "name": "preserving-productive-tensions",
    "category": "architecture",
@@ -12,6 +502,76 @@
    "path": "skills/architecture/preserving-productive-tensions"
   },
   {
+   "name": "proof-of-concept-plan",
+   "category": "architecture",
+   "description": "Plan and execute focused POCs to validate architectural decisions before full commitment.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/decision-making/skills/proof-of-concept-plan",
+   "path": "skills/architecture/proof-of-concept-plan"
+  },
+  {
+   "name": "reliability-design",
+   "category": "architecture",
+   "description": "Design systems that fail gracefully and recover automatically. Use when defining SLAs, designing for fault tolerance, or improving uptime.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/quality-attributes/skills/reliability-design",
+   "path": "skills/architecture/reliability-design"
+  },
+  {
+   "name": "rfc-template",
+   "category": "architecture",
+   "description": "Propose architectural changes with comprehensive RFCs. Structure feedback, document decisions, track rationale. Use when proposing major architecture changes or design patterns.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/communication/skills/rfc-template",
+   "path": "skills/architecture/rfc-template"
+  },
+  {
+   "name": "risk-assessment",
+   "category": "architecture",
+   "description": "Identify and manage architectural risks using risk matrices and mitigation strategies.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/decision-making/skills/risk-assessment",
+   "path": "skills/architecture/risk-assessment"
+  },
+  {
+   "name": "scalability-analysis",
+   "category": "architecture",
+   "description": "Analyze and predict system scalability. Model growth, identify bottlenecks, project infrastructure costs. Use when planning for growth or investigating performance limits.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/quality-attributes/skills/scalability-analysis",
+   "path": "skills/architecture/scalability-analysis"
+  },
+  {
+   "name": "schema-evolution",
+   "category": "architecture",
+   "description": "Manage database schema changes while maintaining backwards compatibility. Handle migrations, versioning, and zero-downtime deployments. Use when evolving data models in production systems.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/data-architecture/skills/schema-evolution",
+   "path": "skills/architecture/schema-evolution"
+  },
+  {
+   "name": "security-architecture",
+   "category": "architecture",
+   "description": "Design security architecture covering authentication, authorization, data protection, and threat models. Use when building security-critical systems.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/quality-attributes/skills/security-architecture",
+   "path": "skills/architecture/security-architecture"
+  },
+  {
    "name": "senior-architect",
    "category": "architecture",
    "description": "This skill should be used when the user asks to \"design system architecture\", \"evaluate microservices vs monolith\", \"create architecture diagrams\", \"analyze dependencies\", \"choose a database\", \"plan for scalability\", \"make technical decisions\", or \"review system design\". Use for architecture decision records (ADRs), tech stack evaluation, system design reviews, dependency analysis, and generating architecture diagrams in Mermaid, PlantUML, or ASCII format.",
@@ -20,6 +580,466 @@
    "license": "MIT",
    "source_path": "engineering-team/skills/senior-architect",
    "path": "skills/architecture/senior-architect"
+  },
+  {
+   "name": "sequence-diagram",
+   "category": "architecture",
+   "description": "Show interactions and flows over time. Illustrate request paths, asynchronous patterns, error handling. Use when documenting complex flows or onboarding on system behavior.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/communication/skills/sequence-diagram",
+   "path": "skills/architecture/sequence-diagram"
+  },
+  {
+   "name": "service-mesh-patterns",
+   "category": "architecture",
+   "description": "Implement service mesh patterns for observability, resilience, and traffic management. Use when managing complex microservices communication at scale.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/service-mesh-patterns",
+   "path": "skills/architecture/service-mesh-patterns"
+  },
+  {
+   "name": "stakeholder-presentation",
+   "category": "architecture",
+   "description": "Present architecture to diverse audiences (executives, product, engineers). Tailor message, manage Q&A, handle skepticism. Use when communicating major decisions or visions.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/communication/skills/stakeholder-presentation",
+   "path": "skills/architecture/stakeholder-presentation"
+  },
+  {
+   "name": "storage-selection",
+   "category": "architecture",
+   "description": "Choose the right database technology for specific workloads. Evaluate relational, NoSQL, data warehouses, and search engines. Use when selecting storage systems for new features or optimizing existing ones.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/data-architecture/skills/storage-selection",
+   "path": "skills/architecture/storage-selection"
+  },
+  {
+   "name": "system-audit",
+   "category": "architecture",
+   "description": "Conduct comprehensive system architecture evaluation. Assess design quality, technical debt, operational readiness, scalability. Use when auditing existing systems.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architect-toolkit/skills/system-audit",
+   "path": "skills/architecture/system-audit"
+  },
+  {
+   "name": "system-decomposition",
+   "category": "architecture",
+   "description": "Break complex systems into bounded contexts with DDD. Map business capabilities to service boundaries, define ubiquitous language, assess cohesion/coupling. Use when refactoring monoliths or designing new architectures.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/system-design/skills/system-decomposition",
+   "path": "skills/architecture/system-decomposition"
+  },
+  {
+   "name": "tech-debt-assessment",
+   "category": "architecture",
+   "description": "Measure, prioritize, and address technical debt. Classify debt by impact and effort. Build paydown roadmap. Use when evaluating system health or planning refactoring.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architecture-governance/skills/tech-debt-assessment",
+   "path": "skills/architecture/tech-debt-assessment"
+  },
+  {
+   "name": "technical-mentoring",
+   "category": "architecture",
+   "description": "Coach engineers on architecture and design. Provide feedback, guide learning, support growth. Use when mentoring junior architects or senior engineers.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/architect-toolkit/skills/technical-mentoring",
+   "path": "skills/architecture/technical-mentoring"
+  },
+  {
+   "name": "technology-radar",
+   "category": "architecture",
+   "description": "Evaluate and track technology choices on a radar. Use when selecting frameworks, databases, or tools.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/decision-making/skills/technology-radar",
+   "path": "skills/architecture/technology-radar"
+  },
+  {
+   "name": "trade-off-analysis",
+   "category": "architecture",
+   "description": "Analyze architectural trade-offs systematically using decision matrices. Use when comparing design options or justifying architectural choices to stakeholders.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/quality-attributes/skills/trade-off-analysis",
+   "path": "skills/architecture/trade-off-analysis"
+  },
+  {
+   "name": "vendor-evaluation",
+   "category": "architecture",
+   "description": "Systematically evaluate and select vendors for infrastructure, SaaS, or services.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "architect/decision-making/skills/vendor-evaluation",
+   "path": "skills/architecture/vendor-evaluation"
+  },
+  {
+   "name": "aec-agents-workflow-orchestrator",
+   "category": "bim-aec",
+   "description": "> Use when a task spans multiple AEC technologies (Blender, IfcOpenShell, Bonsai, Sverchok) and you need to decide which tool handles which step, or when orchestrating multi-step BIM pipelines such as IFC creation to visualization to authoring. Prevents the common mistake of mixing IfcStore.get_file() with ifcopenshell.open() in the same context, or calling Bonsai operators outside a Bonsai-loaded session. Provides decision trees for technology selection, workflow sequencing, and bridge patterns between tools. Keywords: cross-technology, workflow orchestration, BIM pipeline, technology selection, Blender IfcOpenShell Bonsai integration, multi-step AEC, bridge pattern, which tool should I use, combine Blender and IFC, multi-tool workflow, how to connect tools.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/aec-cross-tech/agents/aec-agents-workflow-orchestrator",
+   "path": "skills/bim-aec/aec-agents-workflow-orchestrator"
+  },
+  {
+   "name": "aec-core-bim-workflows",
+   "category": "bim-aec",
+   "description": "> Use when implementing end-to-end BIM workflows that combine IfcOpenShell, Bonsai, and Blender -- such as IFC creation from scratch, model enrichment, validation pipelines, geometry extraction, or batch processing of building models. Prevents the common mistake of skipping unit and context setup before creating geometry, or directly modifying IFC attributes instead of using ifcopenshell.api.run(). Covers property set management across tools, spatial hierarchy patterns, and version compatibility for IFC2X3/IFC4/IFC4X3. Keywords: BIM workflow, IFC creation, model validation, property extraction, batch processing, spatial hierarchy, cross-technology, IfcOpenShell Bonsai Blender, pset management, how to create IFC model, step by step BIM, get properties from IFC.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/aec-cross-tech/core/aec-core-bim-workflows",
+   "path": "skills/bim-aec/aec-core-bim-workflows"
+  },
+  {
+   "name": "bonsai-agents-ifc-validator",
+   "category": "bim-aec",
+   "description": "> Use when validating, auditing, or verifying IFC model quality in Bonsai projects. Provides systematic checks for spatial hierarchy completeness, property set compliance, geometry validity, classification correctness, and IDS (Information Delivery Specification) conformance using ifctester. Prevents shipping models with missing spatial containment or incomplete property sets. Keywords: IFC validation, audit, quality check, spatial hierarchy, property set, IDS, ifctester, model quality, Bonsai validation, compliance, check my IFC file, is my model correct, find errors.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/agents/bonsai-agents-ifc-validator",
+   "path": "skills/bim-aec/bonsai-agents-ifc-validator"
+  },
+  {
+   "name": "bonsai-core-architecture",
+   "category": "bim-aec",
+   "description": "> Use when developing Bonsai (formerly BlenderBIM) extensions, scripting BIM workflows in Blender, or understanding the Bonsai addon architecture. Prevents the common mistake of using ifcopenshell.open() to access the model instead of tool.Ifc.get() which gives the live Bonsai IFC file. Covers native IFC workflow, bpy.ops.bim.* operators, BIM property panels, and the relationship between Blender objects and IFC entities. Keywords: Bonsai, BlenderBIM, tool.Ifc.get(), bpy.ops.bim, native IFC, addon architecture, IFC-backed properties, BIM authoring, how does Bonsai work, Bonsai internals, Bonsai API.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/core/bonsai-core-architecture",
+   "path": "skills/bim-aec/bonsai-core-architecture"
+  },
+  {
+   "name": "bonsai-errors-common",
+   "category": "bim-aec",
+   "description": "> Use when debugging Bonsai errors -- IFC schema violations, spatial hierarchy errors, property set failures, geometry representation issues, or operator poll failures. Prevents wasting time on symptoms instead of root causes (e.g., missing IfcOwnerHistory in IFC2X3 causing cryptic errors). Provides diagnostic decision trees and recovery strategies for all common Bonsai failure modes. Keywords: Bonsai error, schema violation, spatial hierarchy error, poll failure, drawing error, BCF error, IFC error, troubleshooting, debug, Bonsai not working, Bonsai crashes, element not showing.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/errors/bonsai-errors-common",
+   "path": "skills/bim-aec/bonsai-errors-common"
+  },
+  {
+   "name": "bonsai-impl-bcf",
+   "category": "bim-aec",
+   "description": "> Use when working with BIM Collaboration Format (BCF) files in Bonsai -- creating topics, adding viewpoints, managing comments, or importing/exporting BCF files (v2.1 and v3.0). Prevents the common mistake of creating viewpoints without proper camera snapshots or missing element references. Covers BCF issue tracking integration with IFC elements. Keywords: BCF, BIM Collaboration Format, viewpoint, topic, comment, clash report, issue tracking, BCF v2.1, BCF v3.0, collaboration, share issues, report problem in model, BIM issue.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/impl/bonsai-impl-bcf",
+   "path": "skills/bim-aec/bonsai-impl-bcf"
+  },
+  {
+   "name": "bonsai-impl-clash",
+   "category": "bim-aec",
+   "description": "> Use when performing clash detection, interference checking, or spatial coordination in BIM models using Bonsai and IfcClash. Prevents the common mistake of running clash detection without proper element group filters (testing everything against everything). Covers clash set definition, element filtering, smart grouping of results, and BCF integration for issue tracking. Keywords: clash detection, IfcClash, interference, collision, spatial coordination, clash set, element filter, BCF integration, clash report, find collisions, elements overlap, pipes through walls.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/impl/bonsai-impl-clash",
+   "path": "skills/bim-aec/bonsai-impl-clash"
+  },
+  {
+   "name": "bonsai-impl-classification",
+   "category": "bim-aec",
+   "description": "> Use when classifying IFC elements in Bonsai with systems like Uniclass 2015, OmniClass, NL-SfB, or CCI. Prevents the common mistake of assigning classifications without importing the classification library first. Covers bSDD integration, IfcClassificationReference assignment, bulk classification operations, and cross-referencing between systems. Keywords: classification, Uniclass, OmniClass, NL-SfB, CCI, bSDD, IfcClassificationReference, bulk classification, classification library, classify elements, tag elements, assign class code.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/impl/bonsai-impl-classification",
+   "path": "skills/bim-aec/bonsai-impl-classification"
+  },
+  {
+   "name": "bonsai-impl-drawing",
+   "category": "bim-aec",
+   "description": "> Use when generating 2D drawings from IFC models in Bonsai -- plans, sections, elevations, annotations, or sheet layouts. Prevents the common mistake of creating views without proper drawing style configuration (getting empty or unfiltered output). Covers the complete documentation pipeline from model views through annotations to printable SVG sheet output. Keywords: drawing, plan, section, elevation, annotation, sheet, SVG, titleblock, documentation, 2D drawing, Bonsai drawing, create floor plan, generate section view, print drawings.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/impl/bonsai-impl-drawing",
+   "path": "skills/bim-aec/bonsai-impl-drawing"
+  },
+  {
+   "name": "bonsai-impl-modeling",
+   "category": "bim-aec",
+   "description": "> Use when placing building elements (walls, slabs, columns, beams) in Bonsai or assigning IFC types and materials. Prevents the common mistake of creating geometry without assigning it to the spatial hierarchy (orphaned elements). Covers the complete element creation pipeline: type selection, geometric representation, material layer/profile/constituent assignment, and spatial containment. Keywords: wall, slab, column, beam, IfcWall, IfcSlab, IFC type, predefined type, material layer, material profile, spatial assignment, BIM modeling, make a wall, create building elements, add floor.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/impl/bonsai-impl-modeling",
+   "path": "skills/bim-aec/bonsai-impl-modeling"
+  },
+  {
+   "name": "bonsai-impl-project",
+   "category": "bim-aec",
+   "description": "> Use when creating, opening, or configuring Bonsai IFC projects -- schema selection (IFC2X3/IFC4/IFC4X3), unit configuration, georeference setup, or project templates. Prevents the common mistake of not setting units before creating geometry (defaulting to incorrect units). Covers the complete project lifecycle from creation to delivery. Keywords: IFC project, schema selection, IFC2X3, IFC4, IFC4X3, units, georeference, coordinate reference system, project template, Bonsai project, CRS, EPSG, WGS84, map coordinates, start new project.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/impl/bonsai-impl-project",
+   "path": "skills/bim-aec/bonsai-impl-project"
+  },
+  {
+   "name": "bonsai-impl-qto",
+   "category": "bim-aec",
+   "description": "> Use when calculating quantities from IFC elements in Bonsai -- area, length, volume, weight, or custom quantity sets. Prevents the common mistake of manually computing quantities instead of using QtoCalculator for automated base quantity extraction from geometry. Covers IfcElementQuantity sets, bulk quantity operations, and the complete QTO pipeline from geometry analysis to export. Keywords: quantity takeoff, QTO, IfcElementQuantity, area, volume, length, weight, QtoCalculator, base quantities, cost estimation, calculate area, how much material, measure building.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/impl/bonsai-impl-qto",
+   "path": "skills/bim-aec/bonsai-impl-qto"
+  },
+  {
+   "name": "bonsai-syntax-elements",
+   "category": "bim-aec",
+   "description": "> Use when accessing IFC elements from Blender objects in Bonsai -- getting the IFC entity behind a selected object, or finding which Blender object represents an IFC element. Prevents the common mistake of using ifcopenshell.open() instead of tool.Ifc.get() to access the live Bonsai file. Covers element-to-object mapping, IfcStore retrieval, and the Bonsai data bridge between bpy.types.Object and IFC entities. Keywords: tool.Ifc.get(), IfcStore, element mapping, Blender object to IFC, IFC entity, selected element, data bridge, Bonsai elements, get IFC from selected, which element is this.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/syntax/bonsai-syntax-elements",
+   "path": "skills/bim-aec/bonsai-syntax-elements"
+  },
+  {
+   "name": "bonsai-syntax-geometry",
+   "category": "bim-aec",
+   "description": "> Use when creating or editing IFC geometry representations in Bonsai -- profile extrusions, boolean operations, mesh-to-IFC conversion, or geometry context setup. Prevents the common mistake of creating geometry without specifying the representation context (Body/Axis/ FootPrint). Covers IfcExtrudedAreaSolid, IfcShapeRepresentation, and the relationship between Blender mesh data and IFC geometric representations. Keywords: IFC geometry, extrusion, IfcExtrudedAreaSolid, IfcShapeRepresentation, boolean, geometry context, Body, Axis, mesh to IFC, profile, create 3D shape in IFC, geometry not showing.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/syntax/bonsai-syntax-geometry",
+   "path": "skills/bim-aec/bonsai-syntax-geometry"
+  },
+  {
+   "name": "bonsai-syntax-properties",
+   "category": "bim-aec",
+   "description": "> Use when creating, reading, or editing IFC property sets (Pset) and quantity sets (Qto) in Bonsai. Prevents the common mistake of creating property sets without associating them to elements via IfcRelDefinesByProperties. Covers IfcPropertySingleValue, IfcPropertyEnumeratedValue, IfcQuantityArea/Length/Volume, predefined pset templates, and bulk property management. Keywords: property set, Pset, Qto, IfcPropertySingleValue, IfcPropertyEnumeratedValue, IfcRelDefinesByProperties, custom properties, bulk property, pset template, add property, read pset values.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/syntax/bonsai-syntax-properties",
+   "path": "skills/bim-aec/bonsai-syntax-properties"
+  },
+  {
+   "name": "bonsai-syntax-spatial",
+   "category": "bim-aec",
+   "description": "> Use when creating or managing IFC spatial hierarchy in Bonsai -- IfcSite, IfcBuilding, IfcBuildingStorey, IfcSpace, and their containment relationships. Prevents the critical mistake of not establishing proper spatial decomposition (IfcRelAggregates) causing elements to be invisible in model viewers. Covers spatial containment, decomposition, and Bonsai-specific spatial navigation tools. Keywords: spatial structure, IfcSite, IfcBuilding, IfcBuildingStorey, IfcSpace, IfcRelContainedInSpatialStructure, IfcRelAggregates, spatial hierarchy, add storey, create building structure.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/bonsai/syntax/bonsai-syntax-spatial",
+   "path": "skills/bim-aec/bonsai-syntax-spatial"
+  },
+  {
+   "name": "ifcos-agents-code-validator",
+   "category": "bim-aec",
+   "description": "> Use when reviewing, validating, or auditing IfcOpenShell Python code for correctness. Runs systematic checks for schema compatibility errors, incorrect API usage (direct attribute modification vs api.run), entity reference invalidation, performance anti-patterns, and IFC standard compliance. Prevents shipping code that works on one schema but fails on another. Keywords: code review, validation, audit, IfcOpenShell, API usage, schema compatibility, entity reference, performance, code quality, check my IFC script, review IfcOpenShell code.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/agents/ifcos-agents-code-validator",
+   "path": "skills/bim-aec/ifcos-agents-code-validator"
+  },
+  {
+   "name": "ifcos-core-concepts",
+   "category": "bim-aec",
+   "description": "> Use when learning IFC data model fundamentals or navigating IFC entity relationships. Prevents the common mistake of creating flat element structures without proper spatial hierarchy (Project > Site > Building > Storey). Covers entity hierarchy from IfcRoot to IfcElement, spatial structure, ownership model, placement system, representation system, and relationships across IFC2X3, IFC4, and IFC4X3 schemas. Keywords: IFC data model, entity hierarchy, spatial structure, IfcRoot, IfcElement, IfcProject, placement, representation, IFC schema, BIM fundamentals, what is IFC, IFC for beginners.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/core/ifcos-core-concepts",
+   "path": "skills/bim-aec/ifcos-core-concepts"
+  },
+  {
+   "name": "ifcos-core-runtime",
+   "category": "bim-aec",
+   "description": "> Use when debugging IfcOpenShell crashes, entity reference errors, or performance issues. Prevents the common pitfall of comparing entities with == instead of checking .id() or identity, or holding references to entities after removal. Covers C++ binding behavior, entity invalidation, by_type() return semantics, thread safety, memory management, PascalCase attributes, and installation patterns. Keywords: IfcOpenShell runtime, C++ binding, entity invalidation, by_type, thread safety, memory management, PascalCase, installation, entity identity, install IfcOpenShell, pip install ifcopenshell.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/core/ifcos-core-runtime",
+   "path": "skills/bim-aec/ifcos-core-runtime"
+  },
+  {
+   "name": "ifcos-errors-patterns",
+   "category": "bim-aec",
+   "description": "> Use when debugging IfcOpenShell errors -- RuntimeError on invalid entities, AttributeError from wrong PascalCase, TypeError from wrong parameter types, or entity invalidation after removal. Prevents wasting time on symptoms by providing a diagnostic decision tree for common error patterns. Covers error messages, root causes, and recovery strategies. Keywords: RuntimeError, AttributeError, TypeError, invalid entity, PascalCase error, entity removed, IfcOpenShell error, debugging, exception handling, script throws error, wrong attribute name.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/errors/ifcos-errors-patterns",
+   "path": "skills/bim-aec/ifcos-errors-patterns"
+  },
+  {
+   "name": "ifcos-errors-performance",
+   "category": "bim-aec",
+   "description": "> Use when processing large IFC files (100MB+) or optimizing slow IfcOpenShell scripts. Prevents the #1 performance mistake: calling create_shape() per element instead of using the geometry iterator for batch processing. Covers geometry iterator, by_type caching, batch patterns, memory management, multiprocessing strategies, and profiling. Keywords: performance, large IFC, geometry iterator, create_shape, batch processing, memory, multiprocessing, optimization, slow, 100MB, profiling, IFC file too large, takes too long, out of memory.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/errors/ifcos-errors-performance",
+   "path": "skills/bim-aec/ifcos-errors-performance"
+  },
+  {
+   "name": "ifcos-errors-schema",
+   "category": "bim-aec",
+   "description": "> Use when encountering IFC schema errors or migrating between IFC2X3, IFC4, and IFC4X3. Prevents the common mistake of using IFC4-only entities (e.g., IfcMaterialConstituentSet) in IFC2X3 files. Covers entity availability differences, attribute type changes, ifcpatch for schema migration, and common SchemaError debugging. Keywords: SchemaError, IFC2X3, IFC4, IFC4X3, schema migration, ifcpatch, entity not found, schema compatibility, IFC version, wrong schema, convert IFC version.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/errors/ifcos-errors-schema",
+   "path": "skills/bim-aec/ifcos-errors-schema"
+  },
+  {
+   "name": "ifcos-impl-cost",
+   "category": "bim-aec",
+   "description": "> Use when implementing cost estimation or 5D BIM workflows in IFC models -- cost schedules, cost items, cost values, or linking quantities to costs. Prevents the common mistake of creating cost items without linking them to element quantities. Covers ifcopenshell.api.cost module, cost schedules, cost values, and quantity-to-cost linkage. Keywords: cost, 5D BIM, cost schedule, cost item, cost value, quantity, ifcopenshell.api.cost, cost estimation, IfcCostSchedule, IfcCostItem, budget, pricing, bill of quantities.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-cost",
+   "path": "skills/bim-aec/ifcos-impl-cost"
+  },
+  {
+   "name": "ifcos-impl-creation",
+   "category": "bim-aec",
+   "description": "> Use when building IFC models from scratch -- creating projects, spatial structure, walls, slabs, columns, openings, property sets, and type assignments. Prevents the critical mistake of skipping IfcOwnerHistory (required in IFC2X3) or not establishing spatial containment. Covers the complete creation workflow using ifcopenshell.api from project to element level. Keywords: IFC creation, create project, spatial structure, IfcWall, IfcSlab, IfcColumn, IfcOwnerHistory, api.run, root.create_entity, model from scratch, create IFC file, new IFC project.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-creation",
+   "path": "skills/bim-aec/ifcos-impl-creation"
+  },
+  {
+   "name": "ifcos-impl-geometry",
+   "category": "bim-aec",
+   "description": "> Use when extracting 3D geometry from IFC files, creating geometric representations, or processing IFC geometry for visualization. Prevents the performance mistake of calling create_shape() per element instead of using the geometry iterator. Covers geometry settings, create_shape(), geometry iterator, extrusion/CSG/BRep creation, and coordinate transforms. Keywords: geometry, create_shape, geometry iterator, mesh extraction, extrusion, CSG, BRep, IfcShapeRepresentation, coordinates, 3D, visualization, get vertices from IFC, extract mesh, convert IFC to 3D.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-geometry",
+   "path": "skills/bim-aec/ifcos-impl-geometry"
+  },
+  {
+   "name": "ifcos-impl-materials",
+   "category": "bim-aec",
+   "description": "> Use when assigning materials to IFC elements -- single materials, layer sets (walls), profile sets (beams/columns), or constituent sets (IFC4+). Prevents the common mistake of using IfcMaterialConstituentSet in IFC2X3 (not available). Covers IfcMaterial, IfcMaterialLayerSet, IfcMaterialProfileSet, material properties, and presentation. Keywords: material, IfcMaterial, layer set, profile set, constituent set, material assignment, IfcMaterialLayerSet, IfcMaterialProfileSet, material properties, assign material, wall layers.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-materials",
+   "path": "skills/bim-aec/ifcos-impl-materials"
+  },
+  {
+   "name": "ifcos-impl-mep",
+   "category": "bim-aec",
+   "description": "> Use when modeling MEP (Mechanical, Electrical, Plumbing) systems in IFC -- HVAC, piping, electrical circuits, distribution elements, ports, and connections. Prevents the common mistake of not creating ports for flow connections between elements. Covers IfcSystem, IfcDistributionElement, flow segments, fittings, and MEP property sets. Keywords: MEP, HVAC, piping, electrical, IfcSystem, IfcDistributionElement, port, connection, flow segment, fitting, mechanical, plumbing, duct, ventilation, connect pipes.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-mep",
+   "path": "skills/bim-aec/ifcos-impl-mep"
+  },
+  {
+   "name": "ifcos-impl-profiles",
+   "category": "bim-aec",
+   "description": "> Use when creating structural cross-sections or profile-based extrusions in IFC -- I-beams, C-channels, rectangles, circles, or arbitrary polyline profiles. Prevents the common mistake of defining profiles without proper placement (profile origin misalignment). Covers parametric profiles, arbitrary profiles, profile-based extrusions, and material profile sets. Keywords: profile, IfcProfileDef, I-beam, C-channel, rectangle, circle, extrusion, cross-section, material profile set, structural profile, steel section, HEA, IPE, create beam profile.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-profiles",
+   "path": "skills/bim-aec/ifcos-impl-profiles"
+  },
+  {
+   "name": "ifcos-impl-relationships",
+   "category": "bim-aec",
+   "description": "> Use when managing IFC element relationships -- spatial containment, aggregation, type assignment, property association, material association, or void relationships. Prevents the common mistake of creating elements without establishing their spatial containment (orphaned elements). Covers relationship differences between IFC2X3 and IFC4. Keywords: relationship, containment, aggregation, type assignment, IfcRelContainedInSpatialStructure, IfcRelAggregates, IfcRelDefinesByType, void, nesting, assign to storey, connect elements, add opening.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-relationships",
+   "path": "skills/bim-aec/ifcos-impl-relationships"
+  },
+  {
+   "name": "ifcos-impl-sequence",
+   "category": "bim-aec",
+   "description": "> Use when implementing construction schedules or 4D BIM timelines in IFC -- work schedules, tasks, task dependencies, and Gantt chart data extraction. Prevents the common mistake of not linking tasks to elements (no 4D visualization possible). Covers ifcopenshell.api.sequence, work schedules, task time relationships, and construction sequence modeling. Keywords: schedule, 4D BIM, work schedule, task, Gantt, timeline, construction sequence, IfcWorkSchedule, IfcTask, task dependency, construction planning, project timeline, phase planning.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-sequence",
+   "path": "skills/bim-aec/ifcos-impl-sequence"
+  },
+  {
+   "name": "ifcos-impl-validation",
+   "category": "bim-aec",
+   "description": "> Use when validating IFC files for schema compliance, IDS conformance, or custom quality rules. Prevents the common mistake of only checking schema validity without verifying property set completeness or spatial hierarchy correctness. Covers ifcopenshell.validate, ifctester for IDS validation, georeference validation, and custom validation pipelines. Keywords: validation, IDS, ifctester, ifcopenshell.validate, schema compliance, quality assurance, property set check, spatial hierarchy check, IFC validation, check model quality, find missing properties.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/impl/ifcos-impl-validation",
+   "path": "skills/bim-aec/ifcos-impl-validation"
+  },
+  {
+   "name": "ifcos-syntax-api",
+   "category": "bim-aec",
+   "description": "> Use when writing IfcOpenShell Python code that creates, modifies, or deletes IFC entities. Prevents the #1 AI mistake: using create_entity() or direct attribute assignment instead of ifcopenshell.api.run(). Covers all 30+ API modules, invocation patterns, parameter conventions, and the difference between api.run() and direct module calls. Keywords: ifcopenshell.api, api.run, create_entity, IFC, BIM, IfcWall, IfcSlab, API modules, ifcopenshell Python, how to use api.run, ifcopenshell tutorial.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/syntax/ifcos-syntax-api",
+   "path": "skills/bim-aec/ifcos-syntax-api"
+  },
+  {
+   "name": "ifcos-syntax-elements",
+   "category": "bim-aec",
+   "description": "> Use when querying, traversing, or extracting data from IFC elements -- by_type, by_id, by_guid, inverse references, or property extraction. Prevents the common mistake of manually traversing relationships instead of using the universal property extraction pattern (IsDefinedBy -> HasProperties). Covers get_info(), is_a(), GUID utilities, and attribute access patterns. Keywords: by_type, by_id, by_guid, get_info, is_a, inverse, IsDefinedBy, HasProperties, IFC query, element traversal, property extraction, find all walls, get element by GlobalId, list elements.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/syntax/ifcos-syntax-elements",
+   "path": "skills/bim-aec/ifcos-syntax-elements"
+  },
+  {
+   "name": "ifcos-syntax-fileio",
+   "category": "bim-aec",
+   "description": "> Use when opening, creating, writing, or serializing IFC files with IfcOpenShell. Prevents the common mistake of not using transactions for multi-step operations (no undo on failure). Covers ifcopenshell.open(), file.create(), file.write(), transaction management with undo/redo, and schema selection. Keywords: ifcopenshell.open, file.write, create file, IFC file, transaction, undo, redo, serialize, IFC I/O, file operations, open IFC file, save IFC, read IFC in Python.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/syntax/ifcos-syntax-fileio",
+   "path": "skills/bim-aec/ifcos-syntax-fileio"
+  },
+  {
+   "name": "ifcos-syntax-util",
+   "category": "bim-aec",
+   "description": "> Use when extracting data from IFC models using utility functions -- element properties, selector syntax, placement calculations, unit conversion, or cost/schedule data. Prevents the common mistake of manually parsing IFC relationships instead of using ifcopenshell.util helpers. Covers element utilities, selector syntax, placement helpers, date/unit conversion, and shape extraction. Keywords: ifcopenshell.util, selector, placement, unit conversion, element utility, shape extraction, ifcopenshell.util.element, ifcopenshell.util.selector, get element location, filter elements.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/ifcopenshell/syntax/ifcos-syntax-util",
+   "path": "skills/bim-aec/ifcos-syntax-util"
   },
   {
    "name": "brainstorming",
@@ -310,6 +1330,976 @@
    "license": "MIT",
    "source_path": "skills/debugging/verification-before-completion",
    "path": "skills/debugging/verification-before-completion"
+  },
+  {
+   "name": "a-b-test-design",
+   "category": "design",
+   "description": "Design rigorous A/B tests with hypotheses, variants, metrics, and sample size calculations.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/prototyping-testing/skills/a-b-test-design",
+   "path": "skills/design/a-b-test-design"
+  },
+  {
+   "name": "accessibility-audit",
+   "category": "design",
+   "description": "Conduct a comprehensive accessibility audit against WCAG guidelines with severity ratings and remediation steps.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-systems/skills/accessibility-audit",
+   "path": "skills/design/accessibility-audit"
+  },
+  {
+   "name": "accessibility-test-plan",
+   "category": "design",
+   "description": "Create accessibility testing plans covering assistive technologies and WCAG criteria.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/prototyping-testing/skills/accessibility-test-plan",
+   "path": "skills/design/accessibility-test-plan"
+  },
+  {
+   "name": "affinity-diagram",
+   "category": "design",
+   "description": "Organize qualitative research data into an affinity diagram with themes, clusters, and insight statements. Use when synthesizing large amounts of qualitative data from interviews, observations, or surveys.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/affinity-diagram",
+   "path": "skills/design/affinity-diagram"
+  },
+  {
+   "name": "ai-interface-reviewer",
+   "category": "design",
+   "description": "Audit AI-powered interfaces against the uxuiprinciples Part V taxonomy — 44 principles covering transparency, trust calibration, human override, consent, agentic workflows, and conversational design. Returns structured findings with severity and remediation. API key optional — enriched output requires uxuiprinciples.com API Access.",
+   "source_repo": "uxuiprinciples",
+   "source_url": "https://github.com/uxuiprinciples/agent-skills",
+   "license": "Upstream README: free to use and distribute",
+   "source_path": "ai-interface-reviewer",
+   "path": "skills/design/ai-interface-reviewer"
+  },
+  {
+   "name": "animated-component-libraries",
+   "category": "design",
+   "description": "Pre-built animated React component collections combining Magic UI (150+ TypeScript/Tailwind/Motion components) and React Bits (90+ minimal-dependency animated components). Use this skill when building landing pages, marketing sites, dashboards, or interactive UIs requiring pre-made animated components instead of hand-crafting animations. Triggers on tasks involving animated UI components, Magic UI, React Bits, shadcn/ui integration, Tailwind CSS components, or component library selection. Alternative to manually implementing animations with Framer Motion or GSAP.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/animated-component-libraries",
+   "path": "skills/design/animated-component-libraries"
+  },
+  {
+   "name": "animation-principles",
+   "category": "design",
+   "description": "Apply animation principles to UI motion for purposeful, polished interactions.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/interaction-design/skills/animation-principles",
+   "path": "skills/design/animation-principles"
+  },
+  {
+   "name": "animejs",
+   "category": "design",
+   "description": "Versatile JavaScript animation engine for DOM, CSS, SVG, and JavaScript objects. Use when creating timeline-based animations, stagger effects, SVG morphing, keyframe sequences, or complex choreographed animations. Triggers on tasks involving Anime.js, timeline animations, staggered sequences, SVG path animations, morphing, or multi-step animation choreography. Alternative to GSAP for SVG-heavy animations and React-independent projects.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/animejs",
+   "path": "skills/design/animejs"
+  },
+  {
+   "name": "apply-aesthetic",
+   "category": "design",
+   "description": "Apply a visual direction — an archetype (high-end agency, editorial minimal, brutalist, soft-SaaS, dark-tech) or one of 138 named design systems (apple, linear-app, stripe, vercel, notion, material, shadcn, spotify, tesla…) — by resolving it into the token system. Use when the user wants a specific look/vibe/brand feel, or asks to make a design feel premium/expensive/non-generic.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/apply-aesthetic",
+   "path": "skills/design/apply-aesthetic"
+  },
+  {
+   "name": "barba-js",
+   "category": "design",
+   "description": "Page transitions library for creating fluid, smooth transitions between website pages. Use this skill when implementing page transitions, creating SPA-like experiences, adding animated route changes, or building websites with smooth navigation. Triggers on tasks involving Barba.js, page transitions, routing, view management, transition hooks, GSAP integration, or smooth page navigation. Works with gsap-scrolltrigger for transition animations.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/barba-js",
+   "path": "skills/design/barba-js"
+  },
+  {
+   "name": "brandkit",
+   "category": "design",
+   "description": "Generate a complete, accessible brand design system from a brief — primitive → semantic → component DTCG tokens (color, type, spacing, radius, shadow, motion), light + dark, plus a single theme.css — verified for WCAG. Use when the user wants a from-scratch brand/design foundation, a new palette + type system, or a themeable token kit for a product.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/brandkit",
+   "path": "skills/design/brandkit"
+  },
+  {
+   "name": "card-sort-analysis",
+   "category": "design",
+   "description": "Analyze card sorting results to inform information architecture and navigation structure. Use after conducting open or closed card sort studies.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/card-sort-analysis",
+   "path": "skills/design/card-sort-analysis"
+  },
+  {
+   "name": "case-study",
+   "category": "design",
+   "description": "Craft portfolio-ready case studies that tell the story of a design project.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/designer-toolkit/skills/case-study",
+   "path": "skills/design/case-study"
+  },
+  {
+   "name": "click-test-plan",
+   "category": "design",
+   "description": "Design click/first-click tests to evaluate navigation and information findability.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/prototyping-testing/skills/click-test-plan",
+   "path": "skills/design/click-test-plan"
+  },
+  {
+   "name": "color-system",
+   "category": "design",
+   "description": "Build a comprehensive color system with palette generation, semantic mapping, and accessibility compliance.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/color-system",
+   "path": "skills/design/color-system"
+  },
+  {
+   "name": "competitive-analysis",
+   "category": "design",
+   "description": "Conduct a structured competitive analysis comparing UX patterns, features, strengths, and gaps across rival products.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ux-strategy/skills/competitive-analysis",
+   "path": "skills/design/competitive-analysis"
+  },
+  {
+   "name": "component-spec",
+   "category": "design",
+   "description": "Write a detailed component specification including props, states, variants, accessibility requirements, and usage guidelines.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-systems/skills/component-spec",
+   "path": "skills/design/component-spec"
+  },
+  {
+   "name": "dark-mode-design",
+   "category": "design",
+   "description": "Design effective dark mode interfaces with proper color adaptation, contrast, and elevation.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/dark-mode-design",
+   "path": "skills/design/dark-mode-design"
+  },
+  {
+   "name": "data-visualization",
+   "category": "design",
+   "description": "Design clear, accessible data visualizations with appropriate chart selection and styling.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/data-visualization",
+   "path": "skills/design/data-visualization"
+  },
+  {
+   "name": "design-brief",
+   "category": "design",
+   "description": "Write a comprehensive design brief that defines the problem space, constraints, audience, and success criteria.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ux-strategy/skills/design-brief",
+   "path": "skills/design/design-brief"
+  },
+  {
+   "name": "design-code",
+   "category": "design",
+   "description": "Generate production-ready, accessible, token-driven component code for ANY framework — React+Tailwind, Next.js, SwiftUI, Vue, Svelte, Angular, Solid, Web Components/Lit, React Native, Flutter, Jetpack Compose, vanilla CSS, or CSS-in-JS. Use when the user wants working UI code for a component or screen in a specific stack.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/design-code",
+   "path": "skills/design/design-code"
+  },
+  {
+   "name": "design-component",
+   "category": "design",
+   "description": "Design a UI component spec to the house quality bar — anatomy, variants, sizes, the 8 states, token mapping, and accessibility. Use when the user wants to design or document a component (button, input, tabs, toast, combobox, date picker, modal, etc.) at the spec level before or alongside code. For generating framework code, use design-code.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/design-component",
+   "path": "skills/design/design-component"
+  },
+  {
+   "name": "design-critique",
+   "category": "design",
+   "description": "Facilitate structured design critiques with clear feedback frameworks and actionable outcomes.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-ops/skills/design-critique",
+   "path": "skills/design/design-critique"
+  },
+  {
+   "name": "design-principles",
+   "category": "design",
+   "description": "Define a set of actionable design principles that guide decision-making and resolve trade-offs.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ux-strategy/skills/design-principles",
+   "path": "skills/design/design-principles"
+  },
+  {
+   "name": "design-qa",
+   "category": "design",
+   "description": "Set up or run design QA gates — token + hardcoded-value lint, automated a11y (axe), contrast, visual regression across variants/states/themes/RTL, and the manual a11y checklist. Use when the user wants CI quality gates, to prevent design regressions, or to QA a component/screen before shipping.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/design-qa",
+   "path": "skills/design/design-qa"
+  },
+  {
+   "name": "design-qa-checklist",
+   "category": "design",
+   "description": "Create QA checklists for verifying design implementation accuracy.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-ops/skills/design-qa-checklist",
+   "path": "skills/design/design-qa-checklist"
+  },
+  {
+   "name": "design-rationale",
+   "category": "design",
+   "description": "Write clear design rationale connecting decisions to user needs, business goals, and principles.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/designer-toolkit/skills/design-rationale",
+   "path": "skills/design/design-rationale"
+  },
+  {
+   "name": "design-review",
+   "category": "design",
+   "description": "Review or audit a design/UI across 6 weighted dimensions with Nielsen's 10 heuristics and a prioritized findings table. Use when the user wants a design critique, quality score, heuristic evaluation, or audit of an existing screen, page, or product before/after build.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/design-review",
+   "path": "skills/design/design-review"
+  },
+  {
+   "name": "design-review-process",
+   "category": "design",
+   "description": "Establish design review gates with criteria, checklists, and approval workflows.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-ops/skills/design-review-process",
+   "path": "skills/design/design-review-process"
+  },
+  {
+   "name": "design-sprint-plan",
+   "category": "design",
+   "description": "Plan and facilitate design sprints from challenge framing through prototype testing.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-ops/skills/design-sprint-plan",
+   "path": "skills/design/design-sprint-plan"
+  },
+  {
+   "name": "design-system-adoption",
+   "category": "design",
+   "description": "Create adoption strategies and materials to drive design system usage across teams.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/designer-toolkit/skills/design-system-adoption",
+   "path": "skills/design/design-system-adoption"
+  },
+  {
+   "name": "design-token",
+   "category": "design",
+   "description": "Define and organize design tokens (color, spacing, typography, elevation) with naming conventions and usage guidance.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-systems/skills/design-token",
+   "path": "skills/design/design-token"
+  },
+  {
+   "name": "design-token-audit",
+   "category": "design",
+   "description": "Audit design token usage across a product for consistency and coverage.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/designer-toolkit/skills/design-token-audit",
+   "path": "skills/design/design-token-audit"
+  },
+  {
+   "name": "design-tokens",
+   "category": "design",
+   "description": "Generate, extend, or audit design tokens in DTCG format with the 3-tier architecture (primitive → semantic → component). Use when the user wants a color palette, type scale, spacing/shadow/radius/motion tokens, multi-brand theming, or wants to validate token files. Covers colors, typography, spacing, shadows, borders, breakpoints, motion, gradients, opacity, blur, sizing, states, theming.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/design-tokens",
+   "path": "skills/design/design-tokens"
+  },
+  {
+   "name": "diary-study-plan",
+   "category": "design",
+   "description": "Design a diary study plan with prompts, duration, participant criteria, and analysis framework. Use when you need to understand user behavior over time in natural contexts.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/diary-study-plan",
+   "path": "skills/design/diary-study-plan"
+  },
+  {
+   "name": "documentation-template",
+   "category": "design",
+   "description": "Generate structured documentation templates for components, patterns, or guidelines within a design system.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-systems/skills/documentation-template",
+   "path": "skills/design/documentation-template"
+  },
+  {
+   "name": "empathy-map",
+   "category": "design",
+   "description": "Build a 4-quadrant empathy map (Says, Thinks, Does, Feels) to synthesize user research into actionable insights. Use when you need to quickly capture and share user understanding across the team.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/empathy-map",
+   "path": "skills/design/empathy-map"
+  },
+  {
+   "name": "error-handling-ux",
+   "category": "design",
+   "description": "Design error prevention, detection, and recovery experiences.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/interaction-design/skills/error-handling-ux",
+   "path": "skills/design/error-handling-ux"
+  },
+  {
+   "name": "experience-map",
+   "category": "design",
+   "description": "Create a holistic experience map showing the full ecosystem of user touchpoints, channels, and relationships.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ux-strategy/skills/experience-map",
+   "path": "skills/design/experience-map"
+  },
+  {
+   "name": "experiment-designer",
+   "category": "design",
+   "description": "Use when planning product experiments, writing testable hypotheses, estimating sample size, prioritizing tests, or interpreting A/B outcomes with practical statistical rigor.",
+   "source_repo": "alirezarezvani-skills",
+   "source_url": "https://github.com/alirezarezvani/claude-skills",
+   "license": "MIT",
+   "source_path": "product-team/skills/experiment-designer",
+   "path": "skills/design/experiment-designer"
+  },
+  {
+   "name": "feedback-patterns",
+   "category": "design",
+   "description": "Design system feedback for user actions including confirmations, status updates, and notifications.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/interaction-design/skills/feedback-patterns",
+   "path": "skills/design/feedback-patterns"
+  },
+  {
+   "name": "figma-integration",
+   "category": "design",
+   "description": "Keep Figma and code in sync — map the 3-tier DTCG tokens to Figma Variables (collections + modes), sync in either direction, use the Figma MCP when connected, and verify component parity (variants/states). Use when the user wants to push tokens/components to Figma, pull a design into code, set up token↔Variable sync, or check design-code drift.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/figma-integration",
+   "path": "skills/design/figma-integration"
+  },
+  {
+   "name": "flow-checker",
+   "category": "design",
+   "description": "Run preflight and postflight checklists against UX flows before you design and before you ship. Covers onboarding, forms, pricing, dashboards, and empty states. Returns structured findings with severity and smell linkage. Requires uxuiprinciples.com API Access (pro tier).",
+   "source_repo": "uxuiprinciples",
+   "source_url": "https://github.com/uxuiprinciples/agent-skills",
+   "license": "Upstream README: free to use and distribute",
+   "source_path": "flow-checker",
+   "path": "skills/design/flow-checker"
+  },
+  {
+   "name": "gesture-patterns",
+   "category": "design",
+   "description": "Design gesture-based interactions for touch and pointer devices.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/interaction-design/skills/gesture-patterns",
+   "path": "skills/design/gesture-patterns"
+  },
+  {
+   "name": "gsap-scrolltrigger",
+   "category": "design",
+   "description": "Comprehensive skill for GSAP (GreenSock Animation Platform) and ScrollTrigger plugin. Use this skill when creating web animations, scroll-driven experiences, timelines, tweens, scroll-triggered animations, pinning, scrubbing, parallax effects, or animating DOM elements, SVG, Canvas, WebGL, or Three.js. Triggers on tasks involving GSAP, ScrollTrigger, smooth animations, scroll effects, or animation sequencing.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/gsap-scrolltrigger",
+   "path": "skills/design/gsap-scrolltrigger"
+  },
+  {
+   "name": "handoff-spec",
+   "category": "design",
+   "description": "Create developer handoff specifications with measurements, behaviors, assets, and edge cases.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-ops/skills/handoff-spec",
+   "path": "skills/design/handoff-spec"
+  },
+  {
+   "name": "heuristic-evaluation",
+   "category": "design",
+   "description": "Conduct expert heuristic evaluations using Nielsen's heuristics and domain-specific criteria.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/prototyping-testing/skills/heuristic-evaluation",
+   "path": "skills/design/heuristic-evaluation"
+  },
+  {
+   "name": "icon-system",
+   "category": "design",
+   "description": "Create an icon system specification covering grid, sizing, naming, categories, and implementation guidance.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-systems/skills/icon-system",
+   "path": "skills/design/icon-system"
+  },
+  {
+   "name": "illustration-style",
+   "category": "design",
+   "description": "Define an illustration style guide with visual language, color usage, and application rules.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/illustration-style",
+   "path": "skills/design/illustration-style"
+  },
+  {
+   "name": "image-to-code",
+   "category": "design",
+   "description": "Turn a reference image, screenshot, or mockup into token-driven, accessible code — infer the design system from the reference (palette, type scale, spacing, radius, layout archetype), map it to the 3-tier tokens, rebuild it, then verify with the kit's gates. Use when the user provides a design/screenshot and wants matching UI code.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/image-to-code",
+   "path": "skills/design/image-to-code"
+  },
+  {
+   "name": "interface-auditor",
+   "category": "design",
+   "description": "Detect UX antipatterns (smells) in interface descriptions using the uxuiprinciples smell taxonomy. Returns structured findings with matched symptoms, severity, and step-by-step remediation recipes. API key optional — full remediation recipes require uxuiprinciples.com API Access.",
+   "source_repo": "uxuiprinciples",
+   "source_url": "https://github.com/uxuiprinciples/agent-skills",
+   "license": "Upstream README: free to use and distribute",
+   "source_path": "interface-auditor",
+   "path": "skills/design/interface-auditor"
+  },
+  {
+   "name": "interview-script",
+   "category": "design",
+   "description": "Create a structured user interview script with warm-up, core exploration, and wrap-up sections. Use when preparing for user research interviews to ensure consistent, insightful conversations.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/interview-script",
+   "path": "skills/design/interview-script"
+  },
+  {
+   "name": "jobs-to-be-done",
+   "category": "design",
+   "description": "Map user Jobs-to-Be-Done with functional, emotional, and social dimensions plus outcome expectations. Use when reframing product decisions around user motivations rather than features.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/jobs-to-be-done",
+   "path": "skills/design/jobs-to-be-done"
+  },
+  {
+   "name": "journey-map",
+   "category": "design",
+   "description": "Create an end-to-end user journey map with stages, touchpoints, emotions, pain points, and opportunity areas. Use when mapping the full user experience for a product, feature, or service.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/journey-map",
+   "path": "skills/design/journey-map"
+  },
+  {
+   "name": "layout-grid",
+   "category": "design",
+   "description": "Define responsive layout grid systems with columns, gutters, margins, and breakpoint behavior.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/layout-grid",
+   "path": "skills/design/layout-grid"
+  },
+  {
+   "name": "loading-states",
+   "category": "design",
+   "description": "Design loading, skeleton, and progressive content reveal patterns.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/interaction-design/skills/loading-states",
+   "path": "skills/design/loading-states"
+  },
+  {
+   "name": "locomotive-scroll",
+   "category": "design",
+   "description": "Comprehensive skill for Locomotive Scroll smooth scrolling library with parallax effects, viewport detection, and scroll-driven animations. Use this skill when implementing smooth scrolling experiences, creating parallax effects, building scroll-triggered animations, or developing immersive scrolling websites. Triggers on tasks involving Locomotive Scroll, smooth scrolling, parallax, scroll detection, scroll events, sticky elements, horizontal scrolling, or GSAP ScrollTrigger integration. Integrates with GSAP for advanced scroll-driven animations.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/locomotive-scroll",
+   "path": "skills/design/locomotive-scroll"
+  },
+  {
+   "name": "lottie-animations",
+   "category": "design",
+   "description": "After Effects animation rendering for web and React applications. Use this skill when implementing Lottie animations, JSON vector animations, interactive animated icons, micro-interactions, or loading animations. Triggers on tasks involving Lottie, lottie-web, lottie-react, dotLottie, After Effects JSON export, bodymovin, animated SVG alternatives, or designer-created animations. Complements GSAP ScrollTrigger and Framer Motion for scroll-driven and interactive animations.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/lottie-animations",
+   "path": "skills/design/lottie-animations"
+  },
+  {
+   "name": "metrics-definition",
+   "category": "design",
+   "description": "Define UX metrics and KPIs that connect design decisions to measurable business and user outcomes.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ux-strategy/skills/metrics-definition",
+   "path": "skills/design/metrics-definition"
+  },
+  {
+   "name": "micro-interaction-spec",
+   "category": "design",
+   "description": "Specify micro-interactions with trigger, rules, feedback, and loop/mode definitions.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/interaction-design/skills/micro-interaction-spec",
+   "path": "skills/design/micro-interaction-spec"
+  },
+  {
+   "name": "migrate-design-system",
+   "category": "design",
+   "description": "Map this token system to or from any external design system (Material Design 3, Apple HIG, Fluent, Carbon, Ant, shadcn/ui, Radix, Chakra, Mantine, Bootstrap…) — adopt their look, build on their stack, or migrate between systems. Use when the user mentions interop, migration, or a specific design-system/component-library bridge.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/migrate-design-system",
+   "path": "skills/design/migrate-design-system"
+  },
+  {
+   "name": "modern-web-design",
+   "category": "design",
+   "description": "Modern web design trends, principles, and implementation patterns for 2024-2025. Use this skill when designing websites, creating interactive experiences, implementing design systems, ensuring accessibility, or building performance-first interfaces. Triggers on tasks involving modern design trends, micro-interactions, scrollytelling, bold minimalism, cursor UX, glassmorphism, accessibility compliance, performance optimization, or design system architecture. References animation skills (GSAP, Framer Motion, React Spring), 3D skills (Three.js, R3F, Babylon.js), and component libraries for implementation guidance.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/modern-web-design",
+   "path": "skills/design/modern-web-design"
+  },
+  {
+   "name": "motion-framer",
+   "category": "design",
+   "description": "Modern animation library for React and JavaScript. Create smooth, production-ready animations with motion components, variants, gestures (hover/tap/drag), layout animations, AnimatePresence exit animations, spring physics, and scroll-based effects. Use when building interactive UI components, micro-interactions, page transitions, or complex animation sequences.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/motion-framer",
+   "path": "skills/design/motion-framer"
+  },
+  {
+   "name": "naming-convention",
+   "category": "design",
+   "description": "Establish a naming convention system for design elements, components, and tokens with clear rules and examples.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-systems/skills/naming-convention",
+   "path": "skills/design/naming-convention"
+  },
+  {
+   "name": "north-star-vision",
+   "category": "design",
+   "description": "Articulate a compelling north-star product vision that aligns teams and inspires strategic design decisions.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ux-strategy/skills/north-star-vision",
+   "path": "skills/design/north-star-vision"
+  },
+  {
+   "name": "opportunity-framework",
+   "category": "design",
+   "description": "Identify, evaluate, and prioritize design opportunities using impact-effort frameworks and strategic criteria.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ux-strategy/skills/opportunity-framework",
+   "path": "skills/design/opportunity-framework"
+  },
+  {
+   "name": "pattern-library",
+   "category": "design",
+   "description": "Structure a pattern library entry with problem context, solution pattern, usage examples, and related patterns.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-systems/skills/pattern-library",
+   "path": "skills/design/pattern-library"
+  },
+  {
+   "name": "pixijs-2d",
+   "category": "design",
+   "description": "Fast, lightweight 2D rendering engine for creating interactive graphics, particle effects, and canvas-based applications using WebGL/WebGPU. Use this skill when building 2D games, particle systems, interactive canvases, sprite animations, or UI overlays on 3D scenes. Triggers on tasks involving PixiJS, 2D rendering, sprite sheets, particle effects, filters, or high-performance canvas graphics. Alternative to Canvas2D with WebGL acceleration for rendering thousands of sprites at 60 FPS.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/pixijs-2d",
+   "path": "skills/design/pixijs-2d"
+  },
+  {
+   "name": "presentation-deck",
+   "category": "design",
+   "description": "Structure compelling design presentations for stakeholders, reviews, and showcases.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/designer-toolkit/skills/presentation-deck",
+   "path": "skills/design/presentation-deck"
+  },
+  {
+   "name": "prototype",
+   "category": "design",
+   "description": "Move an idea up the fidelity ladder (content-first → wireframe → low-fi → high-fi → code) with a validation plan at each level, plus user-journey mapping and usability-testing scripts. Use when the user wants to prototype, wireframe, map a user flow, or plan/run usability testing.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/prototype",
+   "path": "skills/design/prototype"
+  },
+  {
+   "name": "prototype-strategy",
+   "category": "design",
+   "description": "Choose the right prototyping fidelity and method for the design question.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/prototyping-testing/skills/prototype-strategy",
+   "path": "skills/design/prototype-strategy"
+  },
+  {
+   "name": "react-spring-physics",
+   "category": "design",
+   "description": "Physics-based animation library combining React Spring (spring dynamics, gesture integration, 60fps animations) and Popmotion (low-level composable animation utilities, reactive streams). Use when building fluid, natural-feeling UI animations, gesture-driven interfaces, physics simulations, or spring-loaded interactions. Triggers on tasks involving React Spring hooks, spring physics, inertia scrolling, physics-based motion, animation composition, or natural UI movements. Alternative physics approach to motion-framer for more physically accurate animations.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/react-spring-physics",
+   "path": "skills/design/react-spring-physics"
+  },
+  {
+   "name": "redesign",
+   "category": "design",
+   "description": "Upgrade an existing website or app to premium quality without breaking functionality — audit the current design, identify generic/AI tells, then apply taste and system rules surgically. Use when the user wants to improve, modernize, polish, or \"make better\" an existing UI/codebase.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/redesign",
+   "path": "skills/design/redesign"
+  },
+  {
+   "name": "responsive-design",
+   "category": "design",
+   "description": "Design adaptive layouts and interactions that work across all screen sizes and input methods.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/responsive-design",
+   "path": "skills/design/responsive-design"
+  },
+  {
+   "name": "rive-interactive",
+   "category": "design",
+   "description": "State machine-based vector animation with runtime interactivity and web integration. Use this skill when creating interactive animations, state-driven UI, animated components with logic, or designer-created animations with runtime control. Triggers on tasks involving Rive, state machines, interactive vector animations, animation with input handling, ViewModel data binding, or React Rive integration. Alternative to Lottie for animations requiring state machines and two-way interactivity.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/rive-interactive",
+   "path": "skills/design/rive-interactive"
+  },
+  {
+   "name": "scroll-reveal-libraries",
+   "category": "design",
+   "description": "Simple scroll-triggered reveal animations using AOS (Animate On Scroll). Use this skill when building marketing pages, landing pages, or content-heavy sites requiring basic fade/slide effects without complex animation orchestration. Triggers on tasks involving scroll animations, scroll-triggered reveals, AOS, simple animations, or basic scroll effects. Alternative to GSAP ScrollTrigger and Locomotive Scroll for simpler use cases. Compare with motion-framer for React-specific animations.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/scroll-reveal-libraries",
+   "path": "skills/design/scroll-reveal-libraries"
+  },
+  {
+   "name": "site-architecture",
+   "category": "design",
+   "description": "When the user wants to audit, redesign, or plan their website's structure, URL hierarchy, navigation design, or internal linking strategy. Use when the user mentions 'site architecture,' 'URL structure,' 'internal links,' 'site navigation,' 'breadcrumbs,' 'topic clusters,' 'hub pages,' 'orphan pages,' 'silo structure,' 'information architecture,' or 'website reorganization.' Also use when someone has SEO problems and the root cause is structural (not content or schema). NOT for content strategy decisions about what to write (use content-strategy) or for schema markup (use schema-markup).",
+   "source_repo": "alirezarezvani-skills",
+   "source_url": "https://github.com/alirezarezvani/claude-skills",
+   "license": "MIT",
+   "source_path": "marketing-skill/skills/site-architecture",
+   "path": "skills/design/site-architecture"
+  },
+  {
+   "name": "spacing-system",
+   "category": "design",
+   "description": "Create a consistent spacing system based on a base unit with contextual application rules.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/spacing-system",
+   "path": "skills/design/spacing-system"
+  },
+  {
+   "name": "stakeholder-alignment",
+   "category": "design",
+   "description": "Create stakeholder alignment artifacts including responsibility matrices, decision frameworks, and communication plans.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ux-strategy/skills/stakeholder-alignment",
+   "path": "skills/design/stakeholder-alignment"
+  },
+  {
+   "name": "state-machine",
+   "category": "design",
+   "description": "Model complex UI behavior as finite state machines with states, events, and transitions.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/interaction-design/skills/state-machine",
+   "path": "skills/design/state-machine"
+  },
+  {
+   "name": "summarize-interview",
+   "category": "design",
+   "description": "Summarize a user interview transcript into structured insights with key themes, quotes, and action items. Use after conducting user interviews to extract and share findings efficiently.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/summarize-interview",
+   "path": "skills/design/summarize-interview"
+  },
+  {
+   "name": "team-workflow",
+   "category": "design",
+   "description": "Design team workflows covering task management, collaboration rituals, and tooling.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-ops/skills/team-workflow",
+   "path": "skills/design/team-workflow"
+  },
+  {
+   "name": "test-scenario",
+   "category": "design",
+   "description": "Write usability test scenarios with tasks, success criteria, and observation guides.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/prototyping-testing/skills/test-scenario",
+   "path": "skills/design/test-scenario"
+  },
+  {
+   "name": "theming-system",
+   "category": "design",
+   "description": "Design a theming architecture that supports brand variants, dark mode, and high-contrast modes with token mapping.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-systems/skills/theming-system",
+   "path": "skills/design/theming-system"
+  },
+  {
+   "name": "token-build",
+   "category": "design",
+   "description": "Set up or run the token build pipeline — transform the DTCG tokens/*.json (source of truth) into platform artifacts (CSS variables, Tailwind @theme, JS/TS, iOS Asset Catalog, Android, Compose) with Style Dictionary / Tokens Studio / W3C DTCG export. Use when the user wants to generate platform theme files from tokens, wire token CI, or multi-platform token output.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/token-build",
+   "path": "skills/design/token-build"
+  },
+  {
+   "name": "typography-scale",
+   "category": "design",
+   "description": "Create a modular typography scale with size, weight, and line-height relationships.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/typography-scale",
+   "path": "skills/design/typography-scale"
+  },
+  {
+   "name": "ui-design-system",
+   "category": "design",
+   "description": "UI design system toolkit for Senior UI Designer including design token generation, component documentation, responsive design calculations, and developer handoff tools. Use when creating design systems, generating design tokens, maintaining visual consistency, or facilitating design-dev collaboration and developer handoff.",
+   "source_repo": "alirezarezvani-skills",
+   "source_url": "https://github.com/alirezarezvani/claude-skills",
+   "license": "MIT",
+   "source_path": "product-team/skills/ui-design-system",
+   "path": "skills/design/ui-design-system"
+  },
+  {
+   "name": "usability-test-plan",
+   "category": "design",
+   "description": "Design a usability test plan with tasks, success metrics, participant criteria, and facilitation guide. Use when planning moderated or unmoderated usability testing sessions.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/usability-test-plan",
+   "path": "skills/design/usability-test-plan"
+  },
+  {
+   "name": "user-flow-diagram",
+   "category": "design",
+   "description": "Create user flow diagrams showing paths, decisions, and branch logic.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/prototyping-testing/skills/user-flow-diagram",
+   "path": "skills/design/user-flow-diagram"
+  },
+  {
+   "name": "user-persona",
+   "category": "design",
+   "description": "Create refined user personas from research data with demographics, goals, frustrations, and behavioral patterns. Use when synthesizing user research into actionable persona profiles for design decisions.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-research/skills/user-persona",
+   "path": "skills/design/user-persona"
+  },
+  {
+   "name": "ux-researcher-designer",
+   "category": "design",
+   "description": "UX research and design toolkit for Senior UX Designer/Researcher including data-driven persona generation, journey mapping, usability testing frameworks, and research synthesis. Use when conducting user research, creating personas, mapping user journeys, planning usability tests, or validating designs.",
+   "source_repo": "alirezarezvani-skills",
+   "source_url": "https://github.com/alirezarezvani/claude-skills",
+   "license": "MIT",
+   "source_path": "product-team/skills/ux-researcher-designer",
+   "path": "skills/design/ux-researcher-designer"
+  },
+  {
+   "name": "ux-writing",
+   "category": "design",
+   "description": "Write or review UI copy — buttons, errors, empty states, microcopy, notifications, labels — using the voice & tone system (clear, concise, useful, human, honest) with the what→why→how error formula and inclusive-language rules. Use when the user needs interface copy, error messages, empty-state text, or a copy review.",
+   "source_repo": "uxui-kit",
+   "source_url": "https://github.com/plugin87/ux-ui-agent-skills",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": ".claude/skills/ux-writing",
+   "path": "skills/design/ux-writing"
+  },
+  {
+   "name": "uxui-evaluator",
+   "category": "design",
+   "description": "Evaluate interface descriptions against 195 research-backed UX/UI principles. Returns structured findings with severity, remediation, and business impact. API key optional — enriched output requires uxuiprinciples.com API Access.",
+   "source_repo": "uxuiprinciples",
+   "source_url": "https://github.com/uxuiprinciples/agent-skills",
+   "license": "Upstream README: free to use and distribute",
+   "source_path": "uxui-evaluator",
+   "path": "skills/design/uxui-evaluator"
+  },
+  {
+   "name": "version-control-strategy",
+   "category": "design",
+   "description": "Define version control strategies for design files, components, and libraries.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/design-ops/skills/version-control-strategy",
+   "path": "skills/design/version-control-strategy"
+  },
+  {
+   "name": "vibe-coding-advisor",
+   "category": "design",
+   "description": "Inject UX principle context into your AI coding session before generating components. Maps component types (forms, tables, dashboards, navigation, checkout, etc.) to relevant UX principles, fetches their vibeCodingPrompts, and returns an assembled context block ready to paste into Cursor, Claude Code, Windsurf, or any AI coding tool. API key optional — enriched prompts with research citations require uxuiprinciples.com API Access.",
+   "source_repo": "uxuiprinciples",
+   "source_url": "https://github.com/uxuiprinciples/agent-skills",
+   "license": "Upstream README: free to use and distribute",
+   "source_path": "vibe-coding-advisor",
+   "path": "skills/design/vibe-coding-advisor"
+  },
+  {
+   "name": "visual-hierarchy",
+   "category": "design",
+   "description": "Establish clear visual hierarchy through size, weight, color, spacing, and positioning.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/ui-design/skills/visual-hierarchy",
+   "path": "skills/design/visual-hierarchy"
+  },
+  {
+   "name": "wireframe-spec",
+   "category": "design",
+   "description": "Specify wireframe layouts with content priority, component placement, and annotation.",
+   "source_repo": "sethdford-skills",
+   "source_url": "https://github.com/sethdford/claude-skills",
+   "license": "See licenses/sethdford-skills-LICENSE",
+   "source_path": "designer/prototyping-testing/skills/wireframe-spec",
+   "path": "skills/design/wireframe-spec"
   },
   {
    "name": "aws-solution-architect",
@@ -1442,6 +3432,516 @@
    "path": "skills/meta/writing-skills"
   },
   {
+   "name": "aframe-webxr",
+   "category": "modeling",
+   "description": "Declarative web framework for building browser-based 3D, VR, and AR experiences using HTML and entity-component architecture. Use this skill when creating WebXR applications, VR experiences, AR experiences, 360-degree media viewers, or immersive web content with minimal JavaScript. Triggers on tasks involving A-Frame, WebXR, VR development, AR development, entity-component-system, declarative 3D, or HTML-based 3D scenes. Built on Three.js with accessible HTML-first approach.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/aframe-webxr",
+   "path": "skills/modeling/aframe-webxr"
+  },
+  {
+   "name": "babylonjs-engine",
+   "category": "modeling",
+   "description": "Comprehensive skill for Babylon.js 3D web rendering engine. Use this skill when building real-time 3D experiences, browser-based games, interactive visualizations, or immersive web applications. Triggers on tasks involving Babylon.js, 3D scenes, WebGL/WebGPU rendering, entity-component systems, physics simulations, PBR materials, shadow mapping, or 3D model loading. Alternative to Three.js with built-in editor integration and game engine features.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/babylonjs-engine",
+   "path": "skills/modeling/babylonjs-engine"
+  },
+  {
+   "name": "blender",
+   "category": "modeling",
+   "description": ">- Generate, edit, and render 3D and 2D scenes in Blender by writing Python (bpy) scripts that run headless. Use this skill WHENEVER the task involves Blender or a .blend file, or asks to create/model/join 3D objects, 2D shapes, curves, or text; build or assign materials and textures; UV unwrap; set up lighting or an HDRI environment; rig, keyframe, or animate; or render stills and animations — even if the user does not say the word \"Blender\" but clearly wants a 3D model, a rendered image, a procedural scene, or a 3D asset exported as glTF/FBX/OBJ/STL. Trigger this to get clean, watertight, correctly-joined geometry with proper normals, PBR materials, good lighting, and working animation instead of fragile bpy.ops-based code that breaks headless.",
+   "source_repo": "blender-skill",
+   "source_url": "https://github.com/MartinRapcan/blender-claude-skill",
+   "license": "See licenses/blender-skill-LICENSE",
+   "source_path": "blender",
+   "path": "skills/modeling/blender"
+  },
+  {
+   "name": "blender-agents-code-validator",
+   "category": "modeling",
+   "description": "> Use when reviewing, validating, or auditing Blender Python code for correctness. Runs systematic checks for deprecated API usage, context errors, version compatibility issues, threading violations, data reference invalidation, incorrect operator calls, and addon structure compliance. Prevents shipping code with silent version-dependent failures. Keywords: code review, validation, audit, deprecated API, context error, version compatibility, threading, addon structure, code quality, Blender Python, my addon has errors, check my code, why does my script fail.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/agents/blender-agents-code-validator",
+   "path": "skills/modeling/blender-agents-code-validator"
+  },
+  {
+   "name": "blender-agents-version-migrator",
+   "category": "modeling",
+   "description": "> Use when migrating, porting, or upgrading Blender Python scripts and addons across major versions (3.x to 4.x to 5.x). Provides a systematic migration process covering API renames, removed functions, changed parameters, extension system migration, BGL to GPU module conversion, and bone collection migration. Prevents incomplete migrations that compile but fail at runtime. Keywords: migration, porting, upgrade, version, 3.x to 4.x, 4.x to 5.x, API rename, bgl to gpu, extension migration, bl_info to manifest, bone collection, script stopped working after update, upgrade addon to new Blender.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/agents/blender-agents-version-migrator",
+   "path": "skills/modeling/blender-agents-version-migrator"
+  },
+  {
+   "name": "blender-core-api",
+   "category": "modeling",
+   "description": "> Use when writing Blender Python scripts that access bpy module structure, RNA data, the context system, dependency graph, or operator invocation. Prevents the common mistake of accessing context attributes outside their valid scope or calling operators without checking poll(). Covers bpy.data, bpy.context, bpy.ops, depsgraph evaluation, and RNA property access patterns across Blender 3.x/4.x/5.x. Keywords: bpy, Blender Python, RNA, context, depsgraph, operator, bpy.data, bpy.ops, how to start scripting Blender, Blender Python basics, access objects in scene, get selected object.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/core/blender-core-api",
+   "path": "skills/modeling/blender-core-api"
+  },
+  {
+   "name": "blender-core-gpu",
+   "category": "modeling",
+   "description": "> Use when drawing custom overlays, viewport visualizations, or offscreen renders in Blender Python. Prevents the critical mistake of using the deprecated bgl module (removed in Blender 5.0) instead of the gpu module. Covers gpu.shader, gpu.batch, gpu.state, SpaceView3D draw handlers, built-in shaders, and BGL-to-gpu migration. Keywords: gpu module, bgl, draw handler, viewport overlay, offscreen rendering, SpaceView3D, shader, UNIFORM_COLOR, Blender Python drawing, draw on viewport, custom overlay, draw lines in 3D view.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/core/blender-core-gpu",
+   "path": "skills/modeling/blender-core-gpu"
+  },
+  {
+   "name": "blender-core-runtime",
+   "category": "modeling",
+   "description": "> Use when dealing with Blender Python runtime behavior -- mathutils, threading, handlers, timers, or crashes after undo/redo. Prevents the #1 runtime crash: using threading for bpy operations instead of bpy.app.timers, or caching bpy.data references across undo boundaries. Covers Vector/Matrix/Quaternion, KDTree, BVHTree, @persistent handlers, bpy.msgbus subscriptions, and background mode limitations. Keywords: mathutils, threading, undo, ReferenceError, bpy.app.timers, @persistent, bpy.msgbus, KDTree, BVHTree, background mode, Blender crash, startup script, auto-run, run on open, Blender freezes.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/core/blender-core-runtime",
+   "path": "skills/modeling/blender-core-runtime"
+  },
+  {
+   "name": "blender-core-versions",
+   "category": "modeling",
+   "description": "> Use when writing Blender Python code that must work across multiple versions (3.x/4.x/5.x), or when migrating scripts between Blender versions. Prevents breakage from renamed APIs, removed modules (bgl in 5.0), and changed function signatures. Provides the complete breaking changes matrix, deprecation timeline, and version-safe coding patterns. Keywords: Blender version, migration, deprecated, breaking change, bgl removal, bpy.app.version, version compatibility, 3.x, 4.x, 5.x, API changes, which Blender version, what changed in Blender 4.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/core/blender-core-versions",
+   "path": "skills/modeling/blender-core-versions"
+  },
+  {
+   "name": "blender-errors-context",
+   "category": "modeling",
+   "description": "> Use when debugging Blender RuntimeError from restricted context, operator poll() failures, or wrong context for bpy.ops calls. Prevents the #1 Blender Python error: calling operators or accessing context attributes from wrong areas (e.g., timer callbacks, draw handlers). Covers context override removal in 4.0+, temp_override migration, and context-dependent attribute access patterns. Keywords: RuntimeError, restricted context, poll failure, context override, temp_override, bpy.ops error, wrong context, modal context, Blender context error, operator not available, cannot call operator.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/errors/blender-errors-context",
+   "path": "skills/modeling/blender-errors-context"
+  },
+  {
+   "name": "blender-errors-data",
+   "category": "modeling",
+   "description": "> Use when debugging Blender ReferenceError from removed objects, undo-invalidated bpy.data references, or stale ID pointers. Prevents the common crash of caching bpy.data references across undo/redo operations (references become invalid). Covers safe data access patterns, ID reference caching pitfalls, data lifecycle management, and bpy.data collections. Keywords: ReferenceError, undo, stale reference, bpy.data, ID pointer, data invalidation, removed object, data lifecycle, StructRNA, Blender crash, object disappeared after undo, StructRNA has been removed.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/errors/blender-errors-data",
+   "path": "skills/modeling/blender-errors-data"
+  },
+  {
+   "name": "blender-errors-version",
+   "category": "modeling",
+   "description": "> Use when debugging Blender AttributeError from removed APIs, ImportError from deprecated modules (bgl in 5.0), or breaking changes in operator signatures between versions. Prevents silent failures from using APIs that were renamed or removed in newer Blender versions. Provides migration patterns from 3.x to 4.x to 5.x with complete replacement mappings. Keywords: AttributeError, ImportError, deprecated, version error, bgl, migration, breaking change, removed API, 3.x to 4.x, 4.x to 5.x, Blender upgrade, module has no attribute, addon not compatible.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/errors/blender-errors-version",
+   "path": "skills/modeling/blender-errors-version"
+  },
+  {
+   "name": "blender-impl-addons",
+   "category": "modeling",
+   "description": "> Use when building a production Blender addon -- project structure, testing, CI/CD, or packaging for extensions.blender.org. Prevents the common mistake of hardcoding paths or skipping the extension manifest for Blender 4.2+. Covers multi-file addon structure, testing strategies, dependency management, and distribution workflows. Keywords: addon development, extension packaging, CI/CD, testing, multi-file addon, blender_manifest.toml, distribution, extensions.blender.org, how to make a Blender addon, publish addon, package addon.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/impl/blender-impl-addons",
+   "path": "skills/modeling/blender-impl-addons"
+  },
+  {
+   "name": "blender-impl-animation",
+   "category": "modeling",
+   "description": "> Use when implementing AEC-specific animations -- construction sequences, camera walkthroughs, solar studies, or phasing visualizations in Blender. Prevents the common mistake of keyframing visibility instead of using proper collection visibility for construction phases. Covers NLA workflow orchestration, batch keyframe operations, and time-based visualizations. Keywords: construction animation, camera walkthrough, solar study, phasing, NLA, keyframe, construction sequence, visibility animation, AEC visualization, animate building, show build sequence, camera fly-through.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/impl/blender-impl-animation",
+   "path": "skills/modeling/blender-impl-animation"
+  },
+  {
+   "name": "blender-impl-automation",
+   "category": "modeling",
+   "description": "> Use when automating Blender workflows -- batch rendering, headless processing via blender --background, file format conversion, or pipeline integration. Prevents the common mistake of using viewport operators in background mode (no UI context available). Covers command-line rendering, file I/O automation (OBJ/FBX/STL/USD/glTF), scene assembly, and CI/CD pipeline integration. Keywords: batch rendering, headless, blender --background, automation, file conversion, OBJ, FBX, STL, USD, glTF, pipeline, command-line, STEP import, CAD format, convert file format, export to web.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/impl/blender-impl-automation",
+   "path": "skills/modeling/blender-impl-automation"
+  },
+  {
+   "name": "blender-impl-mesh",
+   "category": "modeling",
+   "description": "> Use when generating mesh geometry for AEC applications -- buildings from vertices, IFC geometry visualization, parametric elements, or custom mesh tools. Prevents the performance mistake of creating vertices one-by-one instead of using from_pydata or BMesh batch operations. Covers mesh creation, BMesh algorithms, foreach_get/set optimization, and mesh analysis tools. Keywords: mesh generation, from_pydata, BMesh, parametric, building geometry, mesh analysis, foreach_get, foreach_set, vertices, AEC mesh, custom mesh tool, create mesh from code, generate 3D shape.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/impl/blender-impl-mesh",
+   "path": "skills/modeling/blender-impl-mesh"
+  },
+  {
+   "name": "blender-impl-nodes",
+   "category": "modeling",
+   "description": "> Use when building Geometry Nodes or Shader Nodes setups programmatically for AEC applications -- parametric modeling, material generation, or procedural geometry. Prevents the common mistake of not using node_tree.interface for Geometry Nodes modifier inputs (4.0+). Covers creating node groups, linking nodes, custom node groups, and AEC-specific node setups. Keywords: Geometry Nodes, Shader Nodes, node group, parametric modeling, procedural, node tree, modifier inputs, material generation, node_tree.interface, create geometry nodes from Python, procedural facade.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/impl/blender-impl-nodes",
+   "path": "skills/modeling/blender-impl-nodes"
+  },
+  {
+   "name": "blender-impl-operators",
+   "category": "modeling",
+   "description": "> Use when implementing complex Blender operators -- modal operators with timer callbacks, file browsers, batch processing, or multi-step workflows. Prevents the common mistake of blocking the UI thread in long operations instead of using modal + timer pattern. Covers modal operators, file browser integration, undo/redo support, progress reporting, and batch processing operators. Keywords: modal operator, timer callback, file browser, batch processing, progress reporting, undo support, multi-step workflow, INVOKE_DEFAULT, make custom button, add menu item, create toolbar button.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/impl/blender-impl-operators",
+   "path": "skills/modeling/blender-impl-operators"
+  },
+  {
+   "name": "blender-syntax-addons",
+   "category": "modeling",
+   "description": "> Use when creating a Blender addon or extension, or migrating from legacy bl_info to blender_manifest.toml (required in 5.0). Prevents the common mistake of using bl_info in Blender 5.0+ where only the manifest format is supported. Covers register/unregister lifecycle, multi-file addon structure, AddonPreferences, class naming, and extension packaging for extensions.blender.org. Keywords: addon, extension, bl_info, blender_manifest.toml, register, unregister, AddonPreferences, packaging, extensions.blender.org, addon boilerplate, how to register addon, addon preferences panel.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-addons",
+   "path": "skills/modeling/blender-syntax-addons"
+  },
+  {
+   "name": "blender-syntax-animation",
+   "category": "modeling",
+   "description": "> Use when creating animations programmatically in Blender -- keyframes, FCurves, Actions, NLA strips, drivers, or armature operations. Prevents the breaking change pitfall of using bone.layers (removed in 4.0) instead of BoneCollection. Covers keyframe_insert, FCurve access, Action data blocks, NLA system, driver expressions, and timeline control. Keywords: keyframe, FCurve, Action, NLA, BoneCollection, armature, driver, animation, bone layers, timeline, bpy.ops.anim, set keyframe from script, animate object, move object over time.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-animation",
+   "path": "skills/modeling/blender-syntax-animation"
+  },
+  {
+   "name": "blender-syntax-data",
+   "category": "modeling",
+   "description": "> Use when managing Blender data blocks -- collections, linked libraries, library overrides, or the asset system. Prevents the common mistake of not handling fake users when removing data blocks, or using append when link+override is needed. Covers bpy.data collections, BlendDataLibraries, library overrides, asset system, and data transfer between files. Keywords: bpy.data, collections, library overrides, linked library, asset system, append, link, fake user, data block, BlendDataLibraries, organize objects, link from other file, asset browser.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-data",
+   "path": "skills/modeling/blender-syntax-data"
+  },
+  {
+   "name": "blender-syntax-materials",
+   "category": "modeling",
+   "description": "> Use when creating or modifying Blender materials and shader nodes via Python. Prevents the breaking change of using old Principled BSDF input names (e.g., \"Subsurface\" renamed to \"Subsurface Weight\" in 4.0). Covers material creation, node tree setup, Principled BSDF input mapping, UV assignment, texture loading, and material slot management. Keywords: material, shader, Principled BSDF, node tree, texture, UV map, material_slot, ShaderNodeBsdfPrincipled, node links, Blender materials, assign material to object, create material from code, change color.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-materials",
+   "path": "skills/modeling/blender-syntax-materials"
+  },
+  {
+   "name": "blender-syntax-mesh",
+   "category": "modeling",
+   "description": "> Use when creating or editing mesh geometry in Blender Python -- vertices, edges, faces, BMesh operations, or bulk data access. Prevents the performance mistake of accessing vertices one-by-one instead of using foreach_get/foreach_set for bulk operations. Covers from_pydata, BMesh creation/editing, UV layers, vertex attributes, normals, and loops. Keywords: mesh, vertices, edges, faces, BMesh, from_pydata, foreach_get, foreach_set, UV layer, vertex colors, normals, bpy.types.Mesh, read vertex positions, edit mesh data, access face normals.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-mesh",
+   "path": "skills/modeling/blender-syntax-mesh"
+  },
+  {
+   "name": "blender-syntax-modifiers",
+   "category": "modeling",
+   "description": "> Use when working with Blender modifiers via Python -- adding, configuring, or applying modifiers, or accessing Geometry Nodes inputs. Prevents the common mistake of reading mesh data before applying modifiers (getting unmodified geometry) instead of using depsgraph.evaluated_get(). Covers modifier stack, Geometry Nodes input identifiers, common AEC modifiers (Array, Boolean, Solidify), and evaluated mesh access. Keywords: modifier, Array, Boolean, Solidify, Geometry Nodes, depsgraph, evaluated_get, modifier.apply, modifier stack, input identifier, add modifier from code, apply modifier Python, boolean cut.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-modifiers",
+   "path": "skills/modeling/blender-syntax-modifiers"
+  },
+  {
+   "name": "blender-syntax-nodes",
+   "category": "modeling",
+   "description": "> Use when building node trees via Python -- Geometry Nodes, Shader Nodes, or Compositor Nodes. Prevents the breaking change of using node.inputs/outputs by index instead of NodeTreeInterface (4.0+) for node group I/O. Covers node creation, linking, group management, and the NodeTreeInterface API migration. Keywords: node tree, Geometry Nodes, Shader Nodes, Compositor, NodeTreeInterface, node_group, links, nodes.new, node sockets, procedural geometry, create nodes from Python, connect nodes, add node.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-nodes",
+   "path": "skills/modeling/blender-syntax-nodes"
+  },
+  {
+   "name": "blender-syntax-operators",
+   "category": "modeling",
+   "description": "> Use when creating custom Blender operators -- bpy.types.Operator subclasses with execute, invoke, or modal methods. Prevents the common mistake of not implementing poll() (causing silent failures) or using wrong bl_idname format. Covers operator lifecycle, bl_options, return values, properties, and context.temp_override (4.0+ replacement for context override). Keywords: Operator, execute, invoke, modal, poll, bl_idname, bl_options, temp_override, REGISTER, UNDO, operator properties, bpy.ops, create custom operator, add button, operator CANCELLED.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-operators",
+   "path": "skills/modeling/blender-syntax-operators"
+  },
+  {
+   "name": "blender-syntax-panels",
+   "category": "modeling",
+   "description": "> Use when creating custom Blender UI panels, menus, or UIList elements. Prevents the common mistake of using wrong bl_space_type/bl_region_type combinations (panel won't show). Covers bpy.types.Panel, draw() method, UILayout API (row/column/box/split), bl_category, sub-panels, draw_header, menus, pie menus, and UIList. Keywords: Panel, UILayout, bl_space_type, bl_region_type, bl_category, draw, row, column, box, split, sub-panel, UIList, menu, Blender UI, create panel, add UI to sidebar, custom panel.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-panels",
+   "path": "skills/modeling/blender-syntax-panels"
+  },
+  {
+   "name": "blender-syntax-properties",
+   "category": "modeling",
+   "description": "> Use when adding custom properties to Blender objects -- BoolProperty, IntProperty, FloatProperty, EnumProperty, PointerProperty, or PropertyGroup. Prevents the common mistake of not using update callbacks (changes not reflected in UI) or returning stale items from dynamic EnumProperty. Covers all bpy.props types, subtypes, units, getters/ setters, and CollectionProperty patterns. Keywords: bpy.props, PropertyGroup, BoolProperty, IntProperty, FloatProperty, EnumProperty, PointerProperty, CollectionProperty, update callback, dynamic enum, add custom property, user input, settings.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-properties",
+   "path": "skills/modeling/blender-syntax-properties"
+  },
+  {
+   "name": "blender-syntax-rendering",
+   "category": "modeling",
+   "description": "> Use when configuring render settings or automating renders in Blender Python. Prevents the version pitfall of using 'BLENDER_EEVEE' (renamed to 'BLENDER_EEVEE_NEXT' in 4.2). Covers render engine selection (EEVEE/Cycles/Workbench), output format setup, camera configuration, batch rendering, and scene.render.* settings. Keywords: render, EEVEE, Cycles, Workbench, render settings, output format, camera, batch render, scene.render, BLENDER_EEVEE_NEXT, resolution, render from script, set render resolution, save image.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/blender/syntax/blender-syntax-rendering",
+   "path": "skills/modeling/blender-syntax-rendering"
+  },
+  {
+   "name": "blender-web-pipeline",
+   "category": "modeling",
+   "description": "Blender to web export workflows for 3D models and animations. Use this skill when exporting Blender models to glTF for web, optimizing 3D assets for Three.js or Babylon.js, batch processing models with Python scripts, automating Blender workflows, or creating web-ready 3D pipelines. Triggers on tasks involving Blender glTF export, bpy scripting, 3D asset optimization, model compression, texture baking, or Blender automation. Exports models for threejs-webgl, react-three-fiber, and babylonjs-engine skills.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/blender-web-pipeline",
+   "path": "skills/modeling/blender-web-pipeline"
+  },
+  {
+   "name": "cad-3d-printable",
+   "category": "modeling",
+   "description": "Use when the user wants to create, design, or build a 3D model for 3D printing using OpenSCAD. Triggers on mentions of 3D printing, OpenSCAD, STL export, printable parts, or physical object design.",
+   "source_repo": "claudecad",
+   "source_url": "https://github.com/rohittp0/ClaudeCAD",
+   "license": "MIT per upstream README (no LICENSE file in repo)",
+   "source_path": "skills/printable",
+   "path": "skills/modeling/cad-3d-printable"
+  },
+  {
+   "name": "lightweight-3d-effects",
+   "category": "modeling",
+   "description": "Lightweight 3D effects for decorative elements and micro-interactions using Zdog, Vanta.js, and Vanilla-Tilt.js. Use this skill when adding pseudo-3D illustrations, animated backgrounds, parallax tilt effects, decorative 3D elements, or subtle depth effects without heavy frameworks. Triggers on tasks involving Zdog pseudo-3D, Vanta.js backgrounds, Vanilla-Tilt parallax, card tilt effects, hero section animations, or lightweight landing page visuals. Ideal for performance-focused designs.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/lightweight-3d-effects",
+   "path": "skills/modeling/lightweight-3d-effects"
+  },
+  {
+   "name": "openscad",
+   "category": "modeling",
+   "description": "> Programmatic 3D CAD with OpenSCAD. Fast path for simple printable parts (Quick mode) and for editing an existing STL without reconstructing it (Modify mode), plus full design, STL-to- parametric reconstruction, and export. Triggers on: 3D model, STL, 3D print, parametric design, openscad, CAD, enclosure, bracket, spacer, adapter, holder, \"modifica questo STL\", or any 3D modeling task.",
+   "source_repo": "openscad-skill",
+   "source_url": "https://github.com/andreahaku/openscad_claude_skill",
+   "license": "No LICENSE file in upstream repo",
+   "source_path": ".",
+   "path": "skills/modeling/openscad"
+  },
+  {
+   "name": "playcanvas-engine",
+   "category": "modeling",
+   "description": "Lightweight WebGL/WebGPU game engine with entity-component architecture and visual editor integration. Use this skill when building browser-based games, interactive 3D applications, or performance-critical web experiences. Triggers on tasks involving PlayCanvas, entity-component systems, game engine development, WebGL games, 3D browser applications, editor-first workflows, or real-time 3D rendering. Alternative to Three.js with game-specific features and integrated development environment.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/playcanvas-engine",
+   "path": "skills/modeling/playcanvas-engine"
+  },
+  {
+   "name": "react-three-fiber",
+   "category": "modeling",
+   "description": "Build declarative 3D scenes with React Three Fiber (R3F) - a React renderer for Three.js. Use when building interactive 3D experiences in React applications with component-based architecture, state management, and reusable abstractions. Ideal for product configurators, portfolios, games, data visualization, and immersive web experiences.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/react-three-fiber",
+   "path": "skills/modeling/react-three-fiber"
+  },
+  {
+   "name": "spline-interactive",
+   "category": "modeling",
+   "description": "Browser-based 3D design tool with visual editor, animation, and web export. Use this skill when creating 3D scenes without code, designing interactive web experiences, prototyping 3D UI, exporting to React/web, or building designer-friendly 3D content. Triggers on tasks involving Spline, no-code 3D, visual 3D editor, 3D animation, state-based interactions, React Spline integration, or scene export. Alternative to Three.js for designers who prefer visual tools over code.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/spline-interactive",
+   "path": "skills/modeling/spline-interactive"
+  },
+  {
+   "name": "substance-3d-texturing",
+   "category": "modeling",
+   "description": "Comprehensive skill for Adobe Substance 3D Painter texturing and material creation workflow. Use this skill when creating PBR materials, exporting textures for web/game engines, optimizing 3D assets for real-time rendering, or automating texture workflows. Triggers on tasks involving Substance 3D Painter, PBR texturing, material creation, texture export for Three.js, Babylon.js, Unity, Unreal, glTF optimization, or Python API automation. Creates optimized textures for threejs-webgl, react-three-fiber, and babylonjs-engine materials.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/substance-3d-texturing",
+   "path": "skills/modeling/substance-3d-texturing"
+  },
+  {
+   "name": "sverchok-agents-code-validator",
+   "category": "modeling",
+   "description": "> Use when reviewing, validating, or auditing Sverchok node code for correctness. Runs 19 automated checks covering data nesting correctness, updateNode callbacks, list matching patterns, socket consistency, import validation, and IfcSverchok compliance. Prevents shipping node code with silent data corruption or missing update triggers. Keywords: Sverchok validation, code review, data nesting check, updateNode check, socket consistency, import validation, IfcSverchok compliance, code quality, my node has errors, check node code.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/agents/sverchok-agents-code-validator",
+   "path": "skills/modeling/sverchok-agents-code-validator"
+  },
+  {
+   "name": "sverchok-core-concepts",
+   "category": "modeling",
+   "description": "> Use when learning Sverchok fundamentals or debugging node tree execution issues. Prevents the common mistake of expecting immediate execution (Sverchok uses deferred tree-level updates, not per-node). Covers node tree architecture, data flow, socket data cache, update triggers, and the 18+ node categories with 500+ nodes. Keywords: Sverchok, node tree, data flow, socket cache, update trigger, node categories, SverchCustomTreeType, parametric design, node execution, what is Sverchok, visual programming, node-based modeling.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/core/sverchok-core-concepts",
+   "path": "skills/modeling/sverchok-core-concepts"
+  },
+  {
+   "name": "sverchok-errors-common",
+   "category": "modeling",
+   "description": "> Use when debugging Sverchok node code errors -- silent data corruption, missing updateNode callbacks, socket data mutation, or IfcSverchok entity management issues. Prevents the 17 most common Sverchok mistakes including wrong data nesting, forgetting deepcopy=True on sv_get() when mutating data, and missing updateNode on bpy.props. Covers diagnostic patterns and fixes for each error type. Keywords: Sverchok error, data nesting, updateNode, deepcopy, sv_get, socket mutation, IfcSverchok error, silent corruption, debugging, common mistakes, wrong output, data disappears, nesting mismatch.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/errors/sverchok-errors-common",
+   "path": "skills/modeling/sverchok-errors-common"
+  },
+  {
+   "name": "sverchok-impl-custom-nodes",
+   "category": "modeling",
+   "description": "> Use when developing a custom Sverchok node -- creating new node types, packaging as addons, or integrating with BMesh. Prevents the critical mistake of not calling self.outputs[i].sv_set() with correct nesting levels (data silently wrong). Covers full node lifecycle, socket creation, property management, BMesh integration, and registration patterns. Keywords: custom node, SverchCustomTreeNode, sv_get, sv_set, node registration, BMesh integration, node lifecycle, custom Sverchok node, addon, make my own node, create Sverchok plugin.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/impl/sverchok-impl-custom-nodes",
+   "path": "skills/modeling/sverchok-impl-custom-nodes"
+  },
+  {
+   "name": "sverchok-impl-extensions",
+   "category": "modeling",
+   "description": "> Use when working with Sverchok-Extra (advanced geometry, SDF, surfaces, fields, solids), Open3d integration, or developing custom Sverchok extensions. Prevents the common mistake of importing sverchok_extra nodes without checking addon availability first. Covers extension development, registration, and advanced geometry operations. Keywords: Sverchok-Extra, SDF, surfaces, fields, solids, Open3d, point cloud, extension development, custom extension, advanced geometry, signed distance field, 3D scan, mesh from points.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/impl/sverchok-impl-extensions",
+   "path": "skills/modeling/sverchok-impl-extensions"
+  },
+  {
+   "name": "sverchok-impl-ifcsverchok",
+   "category": "modeling",
+   "description": "> Use when generating IFC files from Sverchok geometry using IfcSverchok nodes. Prevents the critical mistake of not understanding SvIfcStore transient file management (data is purged on every full tree update -- use use_bonsai_file to persist). Covers the 31 specialized nodes, two geometry conversion modes, the 6-step IFC generation workflow, and Bonsai integration. Keywords: IfcSverchok, SvIfcStore, IFC from Sverchok, geometry to IFC, Bonsai integration, transient file, use_bonsai_file, IFC generation, node-based BIM, parametric IFC, generate IFC from nodes.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/impl/sverchok-impl-ifcsverchok",
+   "path": "skills/modeling/sverchok-impl-ifcsverchok"
+  },
+  {
+   "name": "sverchok-impl-parametric",
+   "category": "modeling",
+   "description": "> Use when designing parametric AEC geometry in Sverchok -- structural grids, facade panels, parametric stairs, roof geometry, MEP routing, or terrain from data. Prevents the common mistake of not using matrix transforms for element placement (using vertex offsets instead, which breaks with rotation). Covers matrix-based transforms, Blender object integration, and data-driven geometry generation. Keywords: parametric design, structural grid, facade panel, stairs, roof, terrain, matrix transform, data-driven, AEC geometry, Sverchok parametric, generate stairs, create facade, parametric building.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/impl/sverchok-impl-parametric",
+   "path": "skills/modeling/sverchok-impl-parametric"
+  },
+  {
+   "name": "sverchok-impl-topologic",
+   "category": "modeling",
+   "description": "> Use when working with TopologicSverchok for building topology analysis -- CellComplex workflows, space adjacency graphs, dual graphs, or energy simulation preparation. Prevents the common mistake of using mesh-based operations for topology analysis instead of non-manifold TopologicSverchok operations. Covers CellComplex-based BIM workflows, room connectivity, and envelope analysis. Keywords: TopologicSverchok, CellComplex, adjacency graph, dual graph, topology, non-manifold, room connectivity, energy simulation, building envelope, daylight analysis, solar, space adjacency.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/impl/sverchok-impl-topologic",
+   "path": "skills/modeling/sverchok-impl-topologic"
+  },
+  {
+   "name": "sverchok-syntax-api",
+   "category": "modeling",
+   "description": "> Use when automating Sverchok from Python -- creating node trees programmatically, connecting sockets, setting parameters, or running batch parametric studies. Prevents the common mistake of not calling process_from_nodes() after modifying parameters (tree won't update). Covers node creation, socket connections, parameter sweeps, and batch processing. Keywords: Sverchok API, programmatic, node creation, socket connection, batch processing, parameter sweep, process_from_nodes, automation, Python scripting, create nodes from code, automate Sverchok.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/syntax/sverchok-syntax-api",
+   "path": "skills/modeling/sverchok-syntax-api"
+  },
+  {
+   "name": "sverchok-syntax-data",
+   "category": "modeling",
+   "description": "> Use when Sverchok data looks wrong, vertices are flattened, or list lengths don't match. Prevents the #1 Sverchok error: wrong data nesting levels (vertices MUST be level 3 [[[x,y,z]]], edges level 2, matrices level 1). Covers nesting requirements for all data types and the 5 list matching modes (cross, repeat, cycle, match_short, match_long). Keywords: nesting level, data structure, list matching, vertices level 3, edges level 2, flatten, data corruption, Sverchok data, list length mismatch, wrong nesting, data too deep, flatten list.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/syntax/sverchok-syntax-data",
+   "path": "skills/modeling/sverchok-syntax-data"
+  },
+  {
+   "name": "sverchok-syntax-scripting",
+   "category": "modeling",
+   "description": "> Use when writing SNLite scripts, Formula Mk5 expressions, Profile Mk3 definitions, or embedding custom Python logic in Sverchok node trees. Prevents the common mistake of wrong socket declaration syntax in SNLite (must use specific type identifiers like 'v' for vertices, 's' for strings). Covers all scripting nodes, built-in aliases, special functions, and the template system. Keywords: SNLite, Formula, Profile, scripting node, SN Functor B, socket declaration, type identifier, custom Python, Sverchok scripting, write Python in Sverchok, script node, inline code.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/syntax/sverchok-syntax-scripting",
+   "path": "skills/modeling/sverchok-syntax-scripting"
+  },
+  {
+   "name": "sverchok-syntax-sockets",
+   "category": "modeling",
+   "description": "> Use when connecting Sverchok nodes, debugging socket compatibility errors, or choosing the right socket type. Prevents the common mistake of connecting incompatible socket types without understanding implicit conversions. Covers all 16 socket types (vertices, strings, matrices, curves, surfaces, fields), socket properties, and type conversion rules. Keywords: socket type, SvVerticesSocket, SvStringsSocket, SvMatrixSocket, socket conversion, compatible sockets, data processing flags, Sverchok sockets, connect different types, socket color meaning.",
+   "source_repo": "openaec-bim",
+   "source_url": "https://github.com/OpenAEC-Foundation/Blender-Bonsai-ifcOpenshell-Sverchok-Claude-Skill-Package",
+   "license": "See licenses/openaec-bim-LICENSE",
+   "source_path": "skills/sverchok/syntax/sverchok-syntax-sockets",
+   "path": "skills/modeling/sverchok-syntax-sockets"
+  },
+  {
+   "name": "threejs-webgl",
+   "category": "modeling",
+   "description": "Comprehensive skill for Three.js 3D web development. Use this skill when building interactive 3D scenes, WebGL/WebGPU applications, product configurators, 3D visualizations, or immersive web experiences. Triggers on tasks involving Three.js, 3D rendering, scenes, cameras, meshes, materials, lights, animations, textures, or WebGL/WebGPU rendering.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/threejs-webgl",
+   "path": "skills/modeling/threejs-webgl"
+  },
+  {
+   "name": "web3d-integration-patterns",
+   "category": "modeling",
+   "description": "Meta-skill for combining Three.js, GSAP ScrollTrigger, React Three Fiber, Motion, and React Spring for complex 3D web experiences. Use when building applications that integrate multiple 3D and animation libraries, requiring architecture patterns, state management, and performance optimization across the stack. Triggers on tasks involving library integration, multi-library architectures, scroll-driven 3D experiences, physics-based 3D animations, or complex interactive 3D applications.",
+   "source_repo": "design-3d-web",
+   "source_url": "https://github.com/freshtechbro/claudedesignskills",
+   "license": "See licenses/design-3d-web-LICENSE",
+   "source_path": ".claude/skills/web3d-integration-patterns",
+   "path": "skills/modeling/web3d-integration-patterns"
+  },
+  {
    "name": "collision-zone-thinking",
    "category": "problem-solving",
    "description": "Force unrelated concepts together to discover emergent properties - \"What if we treated X like Y?",
@@ -2037,7 +4537,10 @@
   "feature-flags-architect (alirezarezvani-skills -> kept alirezarezvani-skills)",
   "kubernetes-operator (alirezarezvani-skills -> kept alirezarezvani-skills)",
   "slo-architect (alirezarezvani-skills -> kept alirezarezvani-skills)",
-  "handoff (alirezarezvani-skills -> kept alirezarezvani-skills)"
+  "handoff (alirezarezvani-skills -> kept alirezarezvani-skills)",
+  "a11y-audit (uxui-kit -> kept alirezarezvani-skills)",
+  "skill-creator (design-3d-web -> kept anthropics-skills)",
+  "ux-writing (sethdford-skills -> kept uxui-kit)"
  ],
  "issues": [
   "frontmatter name mismatch: preserving-productive-tensions != Preserving Productive Tensions",
@@ -2071,7 +4574,10 @@
   "frontmatter name mismatch: test-driven-development != Test-Driven Development (TDD)",
   "frontmatter name mismatch: testing-anti-patterns != Testing Anti-Patterns",
   "frontmatter name mismatch: using-skills != Getting Started with Skills",
-  "frontmatter name mismatch: video-downloader != youtube-downloader"
+  "frontmatter name mismatch: video-downloader != youtube-downloader",
+  "frontmatter name mismatch: cad-3d-printable != printable",
+  "frontmatter name mismatch: c4designer != c4-model",
+  "frontmatter name mismatch: architecture-diagram-c4 != diagramming-architecture"
  ],
  "collisions_with_local_agents_skills": []
 }
