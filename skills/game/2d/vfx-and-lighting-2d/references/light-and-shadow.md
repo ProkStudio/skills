@@ -83,7 +83,7 @@ Weather must not compete with gameplay contrast. Keep it in a narrow value band 
 ## Lighting checklist
 
 1. Is there one consistent light direction across all assets?
-2Does every character and prop have a contact shadow?
+2. Does every character and prop have a contact shadow?
 3. Are shadows hue-shifted rather than black?
 4. Are the brightest palette slots reserved for light only?
 5. Does each area have a distinct ambient colour?
