@@ -13,6 +13,15 @@ context, then hand the player a plan they can actually place block by block.
 bamboo planks, cherry wood, tuff bricks, chiseled/grate/bulb copper, decorated pots and
 pale oak are fair game; say so when a block is version-gated.
 
+This skill owns the **single building shell**. Hand over to a companion skill instead of
+improvising when the task grows past it:
+
+| Companion skill | Takes over when |
+| --- | --- |
+| `../minecraft-interiors/SKILL.md` | The build needs furnished rooms: room program, ceiling heights, furniture, lighting design |
+| `../minecraft-organic-shapes/SKILL.md` | Anything curved: round towers, domes, arches, vaults, bridges, winding paths, rocks, statues |
+| `../minecraft-settlements/SKILL.md` | More than ~3 buildings on one site: centre, roads, districts, plots, building mix |
+
 ## Non-negotiables
 
 1. **Ask 2-3 questions first** (Step 0). Never start building on a one-line prompt.
@@ -71,6 +80,9 @@ small attachments (~10%). One element must break the height line by at least 1.5
 build as a black silhouette against the sky - if the outline is a rectangle, redesign before
 placing a single detail block.
 
+Round masses (towers, rotundas, apses) need exact layer tables, not freehand circles - use
+`../minecraft-organic-shapes/references/circles-and-cylinders.md`.
+
 ## Step 3 - Structure and openings
 
 Decide the structural logic before decoration, then let decoration express it:
@@ -81,13 +93,18 @@ Decide the structural logic before decoration, then let decoration express it:
 - Load path that makes sense - overhangs sit on brackets, upper floors on beams.
 
 Window openings 2 wide or more when a glass surface is wanted; 1-wide openings always look
-like posts (that is the pane rule, not a bug).
+like posts (that is the pane rule, not a bug). Arched openings, arcades and vaulted passages:
+`../minecraft-organic-shapes/references/arches-and-bridges.md`.
 
 ## Step 4 - Roof
 
 Read `references/roofs.md` and pick a roof type that fits the span, style and silhouette.
 At least one of: changed pitch, dormer, hip, valley, chimney, ridge cap or overhang must
 break the roof plane. An L/T footprint from Step 2 gives valleys for free.
+
+Domes, onion caps and conical spires use the computed layer sequences in
+`../minecraft-organic-shapes/references/domes-and-spheres.md` - a linear taper always reads as
+a cone or a pancake.
 
 ## Step 5 - Palette
 
@@ -109,11 +126,19 @@ Read `references/terrain-integration.md`. No flattened square pad, no floating c
 Foundation follows the ground, paths and planting tie the build to the site, and the
 building orientation follows the dominant terrain line rather than the compass.
 
+For the curved things around the build - paths, terraces, retaining walls, streams, custom
+trees and rocks - use `../minecraft-organic-shapes/references/curves-paths-and-rivers.md` and
+`../minecraft-organic-shapes/references/natural-forms.md`.
+
 ## Step 8 - Interior
 
-Read the interiors section of `references/build-types.md`. Ceiling structure, floor zoning,
-a focal point per room, hidden lighting, and interior windows that line up with the exterior
-openings.
+For a full interior, switch to `../minecraft-interiors/SKILL.md` (room program, ceiling
+heights, furniture recipes, light levels, interiors by build type). The interiors section of
+`references/build-types.md` is the quick version when the user only wants a shell with a
+furnished ground floor.
+
+Either way: ceiling structure, floor zoning, a focal point per room, hidden lighting, and
+interior windows that line up with the exterior openings.
 
 ## Step 9 - QA before delivering
 
@@ -159,6 +184,9 @@ half-hip", "push the wing 3 blocks east") instead of a generic offer to help.
 | "Build floats on a flat square" | Terrain flattened for convenience | Step 7 - stepped foundation, retaining walls, planting |
 | "Palette is muddy" | Too many materials, no value contrast | Step 5 - 3 tiers, contrast by value first |
 | "Big build feels small" | Detail motifs not scaled | Step 1 - scale anchors, 2-3 block trim on large masses |
+| "My circle/dome is lumpy" | Freehand curves | `../minecraft-organic-shapes/` layer tables |
+| "Rooms are empty / ceilings feel wrong" | No interior program | `../minecraft-interiors/SKILL.md` |
+| "My village is a row of houses" | Buildings before plan | `../minecraft-settlements/SKILL.md` |
 
 ## References
 
@@ -175,6 +203,9 @@ Read on demand, not all at once:
 | `references/build-types.md` | Houses, castles, villages, farms, tech builds, interiors |
 | `references/variation-engine.md` | Anything repeated - villages, districts, multiple requests |
 | `styles/<style>.md` | Style chosen in Step 0 |
+| `../minecraft-interiors/SKILL.md` | Furnishing and lighting the inside |
+| `../minecraft-organic-shapes/SKILL.md` | Circles, domes, arches, bridges, terrain curves, statues |
+| `../minecraft-settlements/SKILL.md` | Several buildings, streets, districts, a whole town |
 
 Styles available: `medieval-fantasy`, `japanese`, `modern-minimal`, `nordic-rustic`,
 `steampunk-industrial`. If the user asks for a style with no file, build the closest one and
